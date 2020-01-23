@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="./img/svg/logonav.svg" alt="Logo evento">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Notícias</a>
+            <a class="nav-item nav-link" href="#">Conferência</a>
+            <a class="nav-item nav-link" href="#">Exposição</a>
+            <a class="nav-item nav-link" href="#">Speed Recruitment</a>
+            <a class="nav-item nav-link" href="#"><button class="chamada">Pré-inscrição</button></a>
+          </div>
+        </div>
+      </nav>
+      <div class="conteiner-fluid pgcontent">
+        <div class="row">
+          <div class="col-12 foto">
+            <img class="img-fluid imgbg" src="./img/header/Mainpage.jpg" alt="Foto que remete a palestras com a logo do evento">
+            <img src="./img/svg/logogrande.svg" alt="Logo do evento Summit">
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 conteudo">
+              <h1 class="titulo">SUMMIT 1.0</h1>
+              <p>
+                Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders Cat o'nine tails Corsair provost Brethren of the Coast tender Davy Jones' Locker reef capstan flogging swing the lead booty tack wherry Buccaneer gabion dead men tell no tales. 
+              </p>
+              <p id="oevento" class="collapse">
+                Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders Cat o'nine tails Corsair provost Brethren of the Coast tender Davy Jones' Locker reef capstan flogging swing the lead booty tack wherry Buccaneer gabion dead men tell no tales. 
+                Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders Cat o'nine tails Corsair provost Brethren of the Coast tender Davy Jones' Locker reef capstan flogging swing the lead booty tack wherry Buccaneer gabion dead men tell no tales. 
+                Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders Cat o'nine tails Corsair provost Brethren of the Coast tender Davy Jones' Locker reef capstan flogging swing the lead booty tack wherry Buccaneer gabion dead men tell no tales. 
+                Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders Cat o'nine tails Corsair provost Brethren of the Coast tender Davy Jones' Locker reef capstan flogging swing the lead booty tack wherry Buccaneer gabion dead men tell no tales. 
+              </p>
+              <button id="btncollapse" type="button" class="btn vermais" data-toggle="collapse" data-target="#oevento" aria-expanded="false" aria-controls="collapseExample">Ver mais</button>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row contador">
+              <div class="col-lg-4 col-md-3 col-sm-3">
+                <p id="resultado">Garante a tua presença no evento! Começa em: </p>
+              </div>
+              <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="relogio">
+                  <div class="bgnum">
+                    <p>Dias</p>
+                    <p id="dias" class="num"></p>
+                  </div>
+                  <div class="bgnum">
+                    <p>Horas</p>
+                    <p id="horas" class="num"></p>
+                  </div>
+                  <div class="bgnum">
+                    <p>Minutos</p>
+                    <p id="minutos" class="num"></p>
+                  </div>
+                  <div class="bgnum">
+                    <p>Segundos</p>
+                    <p id="segundos" class="num"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 ">
+                <a href="#"><button class="chamada">Pré-inscrição</button></a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      let botao = document.getElementById("btncollapse");
+      $('#oevento').on('show.bs.collapse', function () {
+      botao.innerHTML = "Ver menos"
+      });
+      $('#oevento').on('hide.bs.collapse', function () {
+      botao.innerHTML = "Ver mais"
+      });
+
+      // Set the date we're counting down to
+var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("dias").innerHTML = days;
+  document.getElementById("horas").innerHTML = hours;
+  document.getElementById("minutos").innerHTML = minutes;
+  document.getElementById("segundos").innerHTML = seconds;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("resultado").innerHTML = "O evento começou!";
+  }
+}, 1000);
+    </script>
+  </body>
+</html>
