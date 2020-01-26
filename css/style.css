@@ -49,51 +49,73 @@
 }
 button.chamada {
     background-color: #117711;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
     color: white;
     padding: .5rem 1rem;
 }
 
 
-/* CSS Inicio pagina */
-.pgcontent {
+/* INICIO */
+.pginicio {
     margin-top: 80px;
-    margin-bottom: 160px;
 }
-.foto {
+/* Classe do Background inicial do site */
+.bgfoto1 {
     width: 100%;
     min-height: 300px;
     padding: 0;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
-    background-color: violet;
 } /* classe criada por Jeni */
-.foto .imgbg {
+.bgfoto1 img:nth-child(1) {
     width: 100%;
     min-width: 800px;
 }
-.foto img:nth-child(2) {
+.bgfoto1 img:nth-child(2) {
     position: absolute;
     top: 11.5%;
     right: 32.5%;
     display: block;
     width: 35%;
     min-width: 300px;
-}  /* classe criada por Jeni */
+}  
+/* Classe do background inicial dos subtitulos */
+.bgfoto2 {
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    margin: 30px 0;
+    overflow: hidden;
+}
+.bgfoto2 img {
+    width: 100%;
+    transform: translate(0, -20%);
+}
+
 .titulo {
     font-weight: bold;
 }  /* classe criada por Jeni */
-
+.subtitle {
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, .45);
+    position: absolute;
+    bottom: 25%;
+    padding: 1rem 2rem 1rem 6rem;
+}
 
 
 /* Botão ver mais */
 .btn.vermais {
     background-color: #5CB85C;
+    padding: .4rem 1.5rem;
     color: white;
     display: block;
-    margin: 0 auto;
+    margin: 30px auto 30px auto;
+    border-radius: 2px;
 
 }
 .btn.vermais:hover {
@@ -102,20 +124,116 @@ button.chamada {
     border: 1px solid #5CB85C;
 }
 
+/*CONFERENCIA*/
+.oradores {
+    background-color: rgba(196, 196, 196, .1);
+}
+.card {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+.cardimg {
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+}
+.carousel-item {
+    width: 100%;
+}
+.carousel-item .card {
+    width: 30%;
+    float: left;
+    margin: 0 10px;
+}
+.control-prev {
+    position: absolute;
+    top: 45%;
+    right: 10%;
+}
+.control-next {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+
+}
+#carouselOradores {
+    padding-top: 3rem;
+}
+#oradores3 {
+    padding: 2rem 3rem 0 3rem;
+}
+#todosoradores {
+    padding: 0rem 3rem 2rem 3rem ;
+}
+/* CRONOGRAMA */
+#cronograma {
+    padding: 30px 0;
+}
+#cronograma h2 {
+    margin: 0 auto;
+}
+.horarios {
+    background-color: rgba(196, 196, 196, .1);
+    padding: 20px;
+    margin: 20px 0;
+}
+.horarios h3 {
+    text-align: center;
+    color: white;
+    padding: .5rem 0;
+    margin: 0 35%;
+    background-color: #5199DB;
+}
+.horas {
+    width: 100%;
+    background-color: #5199DB;
+    font-size: 1.7em;
+    font-weight: bolder;
+    margin-top: 130px;
+    text-align: center;
+    color: white;
+}
+.horas.horasLinha::before {
+    content: '';
+    width: 5px;
+    height: 380px;
+    background-color: #5199DB;
+    position: absolute;
+    z-index: -1;
+}
+.horarios .cardAssunto {
+    background-color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
+/*FINAL DA PAGINA*/
+.pgfinal {
+    margin-bottom: 130px;
+}
+
+
 /* CONTADOR */
 .contador {
     width: 100%;
-    height: 130px;
+    height: 100px;
     background-color: #17A2B8;
-    padding: 20px 8%;
+    padding: 1% 0%;
     color: white;
     position: fixed;
     bottom: 0;
+    z-index: 20;
 }
 .contador p {
-    margin: 10% 0;
-    font-weight: 450;
-    font-size: 1em;
+    padding: 1.2rem 0;
+    font-weight: 550;
+    font-size: 1.3em;
 }
 .contador .bgnum {
     float: left;
@@ -124,32 +242,31 @@ button.chamada {
 }
 .contador .bgnum p {
     margin: 0;
+    font-size: .9em;
+    font-weight: normal;
+    padding: 0;
 }
 .contador .bgnum p:first-child {
     padding-bottom: .5rem;
 }
 .contador .bgnum .num {
     background-color: rgba(103, 103, 103, .7);
-    padding: 5px 10px;
+    padding: .1rem .4rem;
     display: block;
     border-radius: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 .contador button.chamada {
     background-color: #B154C9;
     padding: .8rem 1.5rem;
-    margin: 10% 0 0 0;
+    margin: 5% 0 0 0;
 }
 
 /* SPEED RECRUITMENT */
 .card-header.faq {
     border: none;
     box-shadow: none;
-}
-button {
-    box-shadow: none;
-    border: none;
 }
 
 
@@ -169,7 +286,10 @@ button {
     padding: 10px;
     }
     .contador button.chamada {
-        margin-top:  2rem;
+    margin-top:  1rem;
+    }
+    .contador p {
+    padding: .5rem 0 ;
     }
 }
 @media (max-width: 800px) {
@@ -180,10 +300,18 @@ button {
         padding-left: 0%;
         padding-right: 0%;
     }
+    .contador button.chamada {
+        margin-top:  1.6rem;
+        font-size: .8em;
+    }
+    .contador p {
+        font-size: 1em;
+        padding: 1rem 0;
+    }
 
 }
 @media (max-width: 600px) { 
-    .foto img:nth-child(2){
+    .bgfoto1 img:nth-child(2){
         left: 22.5%;
     }
     .conteudo{
@@ -194,37 +322,31 @@ button {
         width: 70%;
         margin-left: 35%;
     }
+    .pgfinal {
+        margin-bottom: 250px;
+    }
     .contador {
         height: auto;
     }
-    .contador div {
+    .contadorDiv {
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center;
     }
-    .contador p {
-        margin-top: 0;
-        margin-bottom: 4%;
-        text-align: center;
-    }
-    .contador .relogio {
-        margin: 0 auto;
-        padding-left: 22.5%;
+    .contadorDiv:nth-child(1) {
+        display: none;
     }
     .contador button.chamada {
-        margin-top: 5%;
+        margin-top:  .6rem;
     }
 }
 @media (max-width: 420px) { 
-    .foto img:nth-child(2){
+    .bgfoto1 img:nth-child(2){
         left: 15%;
-    }
-    .contador .relogio {
-        padding-left: 10%;
     }
 }
 @media (max-width: 360px) { 
-    .foto img:nth-child(2){
+    .bgfoto1 img:nth-child(2){
         left: 11%;
     }
     .contador {
@@ -233,13 +355,10 @@ button {
     .contador .relogio {
         padding-left: 0;
     }
-    .contador .bgnum p:first-child {
-        font-size: .8em;
-    }
 
 }
 @media (max-width: 320px) { 
-    .foto img:nth-child(2){
+    .bgfoto1 img:nth-child(2){
         left: 7%;
     } 
 }
