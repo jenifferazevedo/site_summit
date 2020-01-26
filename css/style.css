@@ -127,15 +127,14 @@ button.chamada {
 /*CONFERENCIA*/
 .oradores {
     background-color: rgba(196, 196, 196, .1);
-    padding: 30px 0;
 }
 .card {
-    width: 30%;
+    width: 100%;
     text-align: center;
     padding: 20px;
-    float: left;
-    margin: 0 10px;
     border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 2rem;
 }
 .cardimg {
     background-color: gray;
@@ -148,6 +147,11 @@ button.chamada {
 .carousel-item {
     width: 100%;
 }
+.carousel-item .card {
+    width: 30%;
+    float: left;
+    margin: 0 10px;
+}
 .control-prev {
     position: absolute;
     top: 45%;
@@ -158,6 +162,15 @@ button.chamada {
     top: 45%;
     left: 10%;
 
+}
+#carouselOradores {
+    padding-top: 3rem;
+}
+#oradores3 {
+    padding: 2rem 3rem 0 3rem;
+}
+#todosoradores {
+    padding: 0rem 3rem 2rem 3rem ;
 }
 
 
@@ -170,17 +183,18 @@ button.chamada {
 /* CONTADOR */
 .contador {
     width: 100%;
-    height: 120px;
+    height: 100px;
     background-color: #17A2B8;
-    padding: 10px 8%;
+    padding: 1% 0%;
     color: white;
     position: fixed;
     bottom: 0;
+    z-index: 20;
 }
 .contador p {
-    margin: 10% 0;
-    font-weight: 450;
-    font-size: 1em;
+    padding: 1.2rem 0;
+    font-weight: 550;
+    font-size: 1.3em;
 }
 .contador .bgnum {
     float: left;
@@ -189,22 +203,25 @@ button.chamada {
 }
 .contador .bgnum p {
     margin: 0;
+    font-size: .9em;
+    font-weight: normal;
+    padding: 0;
 }
 .contador .bgnum p:first-child {
     padding-bottom: .5rem;
 }
 .contador .bgnum .num {
     background-color: rgba(103, 103, 103, .7);
-    padding: 5px 10px;
+    padding: .1rem .4rem;
     display: block;
     border-radius: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 .contador button.chamada {
     background-color: #B154C9;
     padding: .8rem 1.5rem;
-    margin: 10% 0 0 0;
+    margin: 5% 0 0 0;
 }
 
 /* SPEED RECRUITMENT */
@@ -230,7 +247,10 @@ button.chamada {
     padding: 10px;
     }
     .contador button.chamada {
-        margin-top:  2rem;
+    margin-top:  1rem;
+    }
+    .contador p {
+    padding: .5rem 0 ;
     }
 }
 @media (max-width: 800px) {
@@ -240,6 +260,14 @@ button.chamada {
     .contador {
         padding-left: 0%;
         padding-right: 0%;
+    }
+    .contador button.chamada {
+        margin-top:  1.6rem;
+        font-size: .8em;
+    }
+    .contador p {
+        font-size: 1em;
+        padding: 1rem 0;
     }
 
 }
@@ -261,30 +289,21 @@ button.chamada {
     .contador {
         height: auto;
     }
-    .contador div {
+    .contadorDiv {
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center;
     }
-    .contador p {
-        margin-top: 0;
-        margin-bottom: 4%;
-        text-align: center;
-    }
-    .contador .relogio {
-        margin: 0 auto;
-        padding-left: 22.5%;
+    .contadorDiv:nth-child(1) {
+        display: none;
     }
     .contador button.chamada {
-        margin-top: 5%;
+        margin-top:  .6rem;
     }
 }
 @media (max-width: 420px) { 
     .bgfoto1 img:nth-child(2){
         left: 15%;
-    }
-    .contador .relogio {
-        padding-left: 10%;
     }
 }
 @media (max-width: 360px) { 
@@ -296,9 +315,6 @@ button.chamada {
     }
     .contador .relogio {
         padding-left: 0;
-    }
-    .contador .bgnum p:first-child {
-        font-size: .8em;
     }
 
 }
