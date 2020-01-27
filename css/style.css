@@ -84,14 +84,15 @@ button.chamada {
 /* Classe do background inicial dos subtitulos */
 .bgfoto2 {
     width: 100%;
-    height: 300px;
+    max-height: 300px;
+    min-height: 140px;
     padding: 0;
     margin: 30px 0;
     overflow: hidden;
 }
 .bgfoto2 img {
     width: 100%;
-    transform: translate(0, -20%);
+    min-width: 700px;
 }
 
 .titulo {
@@ -128,21 +129,33 @@ button.chamada {
 .oradores {
     background-color: rgba(196, 196, 196, .1);
 }
-.card {
+.card.orador {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 10px 20px; 
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 2rem;
 }
-.cardimg {
+.card.orador h4, .card h4 {
+    margin: 0;
+}
+.card.orador .cardimg {
     background-color: gray;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
     overflow: hidden;
+}
+.card.orador a {
+    text-align: left;
+}
+.card.orador a img {
+    width: 18%;
+}
+.cardshow {
+    display: none;
 }
 .carousel-item {
     width: 100%;
@@ -189,6 +202,7 @@ button.chamada {
     color: white;
     padding: .5rem 0;
     margin: 0 35%;
+    margin-top: 20px;
     background-color: #5199DB;
 }
 .horas {
@@ -209,10 +223,37 @@ button.chamada {
     z-index: -1;
 }
 .horarios .cardAssunto {
+    min-height: 135px;
     background-color: white;
     padding: 10px;
     margin-top: 30px;
 }
+
+/*EXPOSICAO*/
+.exposicao_mapa {
+    width: 100%;
+    background-color: rgba(196, 196, 196, .1);
+    padding: 5% 5%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.exposicao_mapa img {
+    width: 100%;
+}
+
+/* SPEED RECRUITMENT */
+.card-header.faq {
+    border: none;
+    box-shadow: none;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+}
+
+
+
 /*FINAL DA PAGINA*/
 .pgfinal {
     margin-bottom: 130px;
@@ -263,11 +304,6 @@ button.chamada {
     margin: 5% 0 0 0;
 }
 
-/* SPEED RECRUITMENT */
-.card-header.faq {
-    border: none;
-    box-shadow: none;
-}
 
 
 /*Media Queries Jeniffer*/
@@ -291,6 +327,13 @@ button.chamada {
     .contador p {
     padding: .5rem 0 ;
     }
+    .cardshow {
+        display: flex;
+    }
+    /*.horarios h3 {
+        margin: 0 65% 0 10%;
+    }*/
+
 }
 @media (max-width: 800px) {
     .contador button.chamada {
