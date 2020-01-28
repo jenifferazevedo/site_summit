@@ -136,6 +136,7 @@ button.chamada {
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 2rem;
+    cursor: pointer;
 }
 .card.orador h4, .card h4 {
     margin: 0;
@@ -230,6 +231,9 @@ button.chamada {
 }
 
 /*EXPOSICAO*/
+#exposicao {
+    margin-bottom: 30px;
+}
 .exposicao_mapa {
     width: 100%;
     background-color: rgba(196, 196, 196, .1);
@@ -242,23 +246,102 @@ button.chamada {
 }
 
 /* SPEED RECRUITMENT */
-.card-header.faq {
-    border: none;
-    box-shadow: none;
+#recruitment {
+    background-color: rgba(196, 196, 196, .1);
+    margin-bottom: 40px;
 }
-
+#recruitment .conteudo {
+    margin: 20px 2% 0 2%;
+}
+#recruitment .card {
+    margin: 20px;
+}
+.card-header.faq {
+    color: white;
+    background-color: #5CB85C;
+    cursor: pointer;
+}
+.card-header.faq p {
+    margin: 0;
+    font-size: .8em;
+    font-weight: normal;
+}
+.card-header.faq img {
+    width: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 2%;
+}
 button {
     box-shadow: none;
     border: none;
 }
 
-
+/*PRE INSCRICAO*/
+#preInscricao .chamada:hover {
+    color: white;
+}
+#inscricao {
+    background-color: rgba(196, 196, 196, .1);
+    padding: 0 30px 30px 30px;
+}
+#inscricao h2 {
+    text-align: center;
+    padding: 15px 0;
+}
+#inscricao .textoForm {
+    padding: 0 5%;
+}
+#inscricao .mapa {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+#inscricao .mapa iframe {
+    width: 70%;
+    min-width: 300px;
+}
 
 /*FINAL DA PAGINA*/
 .pgfinal {
-    margin-bottom: 130px;
+    margin-bottom: 100px;
+}
+#footer {
+    background-color: #638A90;
+    padding: 20px 20px;
+    color: white;
+}
+#footer h3 {
+    font-size: 1em;
+}
+#footer ul {
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+}
+#footer a {
+    color: white;
+}
+#footer p {
+    font-size: .7em;
+}
+#redesSociais {
+    text-align: center;
+}
+#redesSociais img {
+    width: 30%;
+    max-width: 70px;
+    padding-top: 20px;
 }
 
+#logosFooter {
+    text-align: center;
+}
+#logosFooter img {
+    width: 5%;
+    min-width: 50px;
+    margin: 0 10px;
+}
 
 /* CONTADOR */
 .contador {
@@ -354,12 +437,12 @@ button {
 
 }
 @media (max-width: 600px) { 
-    .bgfoto1 img:nth-child(2){
-        left: 22.5%;
-    }
-    .conteudo{
+    #oevento .conteudo{
         padding-right: 40px;
         padding-left: 40px;
+    }
+    .bgfoto1 img:nth-child(2){
+        left: 22.5%;
     }
     .navbar-nav {
         width: 70%;

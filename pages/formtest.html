@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="./img/svg/logonav.svg" alt="Logo evento">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#conferencia">Conferência</a>
+          <a class="nav-item nav-link" href="#">Exposição</a>
+          <a class="nav-item nav-link" href="#">Speed Recruitment</a>
+          <a class="nav-item nav-link" href="#"><button class="chamada">Pré-inscrição</button></a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="preInscricao" class="pginicio">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <p class="descricao_formulario">Sint ut quaerat qui molestiae inventore excepturi dolor. 
+              Aperiam iusto consequatur occaecati autem id consectetur voluptatem. Maiores quam sit eos. Doloremque quaerat quia inventore dolores nemo deleniti id ut. Omnis sit in fugiat. Dolor enim cum ex ut eum at aut rerum.</p>
+          </div>
+          <div class="col-8">
+            <form class="needs-validation form-group" novalidate>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                      <input type="text" class="form-control" id="" value="" required placeholder="Nome">
+                  </div>
+                  <div class="form-group col-md-6"> 
+                      <input type="text" class="form-control" id="" value="" required placeholder="Apelido">
+                  </div>
+              </div>
+              <div class="form-row">
+                <!--DUVIDA: colocar type email?-->
+                  <div class="form-group col">
+                    <input type="text" class="form-control" id="" value="" required placeholder="@E-mail">
+                  </div>
+              </div>
+              <div class="form-row">
+                <!--DUVIDA: colocar "pattern="^\d{3}\d{3}\d{3}$" como condição para número válido"-->
+                  <div class="form-group col">
+                    <input type="text" class="form-control" id="" value="" required placeholder="Telefone">
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <select class="custom-select"  required>
+                    <option selected disabled value="">Escolhe a tua area de interesse </option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                    <option>4...</option>
+                    <option>5...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor, selecione uma area de interesse.
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-9">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                      </div>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <button class="btn btn-block chamada" type="submit">Pré-Registo</button>
+                  </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      
+      <!--            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label for="validationCustom01"></label>
+                  <input id="nome" type="text" class="form-control" id="validationCustom01" placeholder="Nome" value="" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom02"></label>
+                  <input id="apelido" type="text" class="form-control" id="validationCustom02" placeholder="Apelido" value="" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="validationCustom03"></label>
+                  <input id="email" type="email" class="form-control" id="validationCustom03" placeholder="@E-mail" value="" required>
+                  <div class="invalid-feedback">
+                    Por favor coloque um e-mail válido!
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="validationCustom04"></label>
+                  <input id="telemovel" pattern="^\d{3}\d{3}\d{3}$"  type="tel" class="form-control" id="validationCustom04" placeholder="Telemóvel" value="" required>
+                  <div class="invalid-feedback">
+                    Por favor coloque um número de telemóvel válido.
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="validationCustom05"></label>
+                  <select class="form-control custom-select" id="validationCustom05" required>
+                    <option selected disabled value="">Escolhe a tua area de interesse </option>
+                    <option>1...</option>
+                    <option>2...</option>
+                    <option>3...</option>
+                    <option>4...</option>
+                    <option>5...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecione uma area de interesse.
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-7 form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5 alignend">
+                  <button class="btn chamada" type="submit">Submit form</button>
+                </div>
+              </div>
+            </form>-->
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+    </section>
+
+    <div class="container-fluid">
+      <div class="row contador">
+        <div class="container">
+          <div class="row">
+              <div class="contadorDiv col-lg-3 col-md-3 col-sm-3">
+                <p id="resultado">O evento começa em: </p>
+              </div>
+              <div class="contadorDiv col-lg-6 col-md-6 col-sm-6">
+                <div class="relogio d-flex justify-content-center">
+                  <div class="bgnum">
+                    <p>Dias</p>
+                    <p id="dias" class="num"></p>
+                  </div>
+                  <div class="bgnum">
+                    <p>Horas</p>
+                    <p id="horas" class="num"></p>
+                  </div>
+                  <div class="bgnum">
+                    <p>Minutos</p>
+                    <p id="minutos" class="num"></p>
+                  </div>
+                  <div class="bgnum">
+                    <p>Segundos</p>
+                    <p id="segundos" class="num"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="contadorDiv col-lg-3 col-md-3 col-sm-3 ">
+                <a href="#"><button class="chamada">Pré-inscrição</button></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script>
+    /* Click nav */
+
+
+    /*Botão Ver mais - texto*/
+    let botao = document.getElementById("btncollapse");
+    $('#sobreevento').on('show.bs.collapse', function () {
+    botao.innerHTML = "Ver menos"
+    });
+    $('#sobreevento').on('hide.bs.collapse', function () {
+    botao.innerHTML = "Ver mais"
+    });
+    
+    /*Botão Ver mais Carousel e Cards oradores*/
+    let botao2 = document.getElementById("btncollapse2");
+    let carouselOradores = document.getElementById("carouselOradores");
+    let oradores3 = document.getElementById("oradores3");
+    let todosoradores = document.getElementById("todosoradores");
+
+    let cardshow = document.getElementsByClassName("cardshow");
+    function oradoresBreak(media) {
+      if (media.matches) { 
+        carouselOradores.style.display = "none";
+        oradores3.classList.remove("target");
+        oradores3.style.display = "flex";
+        oradores3.classList.add("justify-content-center");
+        todosoradores.classList.add("justify-content-center")
+      
+        $('#todosoradores').on('show.bs.collapse', function () {
+        botao2.innerHTML = "Ver menos"
+        carouselOradores.style.display = "none";
+        });
+        $('#todosoradores').on('hide.bs.collapse', function () {
+        botao2.innerHTML = "Ver mais"
+        carouselOradores.style.display = "none";
+        oradores3.style.display = "flex";
+    });
+      } else {
+        carouselOradores.style.display = "flex";
+        oradores3.style.display = "none";
+        todosoradores.style.display = "none";
+
+        $('#todosoradores').on('show.bs.collapse', function () {
+        botao2.innerHTML = "Ver menos"
+        carouselOradores.style.display = "none";
+        oradores3.style.display = "flex";
+        todosoradores.style.display = "flex";
+        });
+        $('#todosoradores').on('hide.bs.collapse', function () {
+        botao2.innerHTML = "Ver mais"
+        carouselOradores.style.display = "flex";
+        oradores3.style.display = "none";
+        todosoradores.style.display = "none"
+        });
+      }
+    }
+    let breakpoint1 = window.matchMedia("(max-width: 991.98px)");
+    oradoresBreak(breakpoint1)
+    breakpoint1.addListener(oradoresBreak);
+
+  /* Contador */
+    var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("dias").innerHTML = days;
+      document.getElementById("horas").innerHTML = hours;
+      document.getElementById("minutos").innerHTML = minutes;
+      document.getElementById("segundos").innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("resultado").innerHTML = "O evento começou!";
+      }
+    }, 1000);
+  </script>
+  </body>
+</html>
