@@ -87,7 +87,6 @@ button.chamada {
     max-height: 300px;
     min-height: 140px;
     padding: 0;
-    margin: 30px 0;
     overflow: hidden;
 }
 .bgfoto2 img {
@@ -115,7 +114,7 @@ button.chamada {
     padding: .4rem 1.5rem;
     color: white;
     display: block;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 20px auto;
     border-radius: 2px;
 
 }
@@ -126,6 +125,12 @@ button.chamada {
 }
 
 /*CONFERENCIA*/
+#conferencia {
+    margin-top: 70px;
+}
+.conteudo {
+    margin: 30px 0 20px 0;
+}
 .oradores {
     background-color: rgba(196, 196, 196, .1);
 }
@@ -188,7 +193,7 @@ button.chamada {
 }
 /* CRONOGRAMA */
 #cronograma {
-    padding: 30px 0;
+    margin-top: 30px;
 }
 #cronograma h2 {
     margin: 0 auto;
@@ -232,13 +237,13 @@ button.chamada {
 
 /*EXPOSICAO*/
 #exposicao {
-    margin-bottom: 30px;
+    margin-top: 70px;
 }
 .exposicao_mapa {
     width: 100%;
     background-color: rgba(196, 196, 196, .1);
     padding: 5% 5%;
-    margin: 20px 0;
+    margin: 0;
     overflow: hidden;
 }
 .exposicao_mapa img {
@@ -246,9 +251,13 @@ button.chamada {
 }
 
 /* SPEED RECRUITMENT */
+#speedrecruitment {
+    margin-top: 70px;
+}
 #recruitment {
     background-color: rgba(196, 196, 196, .1);
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 #recruitment .conteudo {
     margin: 20px 2% 0 2%;
@@ -278,12 +287,16 @@ button {
 }
 
 /*PRE INSCRICAO*/
+#preInscricao {
+    margin-top: 70px;
+}
 #preInscricao .chamada:hover {
     color: white;
 }
 #inscricao {
     background-color: rgba(196, 196, 196, .1);
     padding: 0 30px 30px 30px;
+    margin-top: 40px;
 }
 #inscricao h2 {
     text-align: center;
@@ -310,6 +323,7 @@ button {
     background-color: #638A90;
     padding: 20px 20px;
     color: white;
+    margin-top: 70px;
 }
 #footer h3 {
     font-size: 1em;
@@ -338,9 +352,11 @@ button {
     text-align: center;
 }
 #logosFooter img {
-    width: 5%;
-    min-width: 50px;
+    width: 80px;
     margin: 0 10px;
+}
+#logosFooter img:nth-child(3) {
+    width: 60px;
 }
 
 /* CONTADOR */

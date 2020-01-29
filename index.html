@@ -40,7 +40,7 @@
       </div>
       <div class="container ">
         <div class="row">
-          <div class="col-12 conteudo">
+          <div class="col-12">
             <h1 class="titulo">SUMMIT 1.0</h1>
             <p>
               Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders Cat o'nine tails Corsair provost Brethren of the Coast tender Davy Jones' Locker reef capstan flogging swing the lead booty tack wherry Buccaneer gabion dead men tell no tales. 
@@ -67,7 +67,9 @@
       </div>
       <div class="container">
         <div class="row">
-          <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders </p>
+          <div class="col-12 conteudo">
+            <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders </p>
+          </div>
         </div>
         <div>
         <div class="row oradores">
@@ -339,7 +341,9 @@
       </div>
       <div class="container">
         <div class="row">
-          <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders </p>
+          <div class="col-12 conteudo">
+            <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders </p>
+          </div>
         </div>
         <div class="row">
           <div class="exposicao_mapa">
@@ -455,11 +459,14 @@
                   <div class="form-group col">
                     <input type="text" class="form-control" id="" value="" required placeholder="@E-mail">
                   </div>
+                  <div class="invalid-feedback">
+                      É necessário colocar um e-mail válido.
+                  </div>
               </div>
               <div class="form-row">
                 <!--DUVIDA: colocar "pattern="^\d{3}\d{3}\d{3}$" como condição para número válido"-->
                   <div class="form-group col">
-                    <input type="text" class="form-control" id="" value="" required placeholder="Telefone">
+                    <input type="text" class="form-control" id="" value="" required placeholder="Telefone">  
                   </div>
               </div>
               <div class="form-row">
@@ -484,6 +491,9 @@
                           <label class="form-check-label" for="invalidCheck">
                             Li e aceito o Regulamento Geral de Proteção de Dados (RGPD)
                           </label>
+                          <div class="invalid-feedback">
+                              Deve aceitar o Regulamento Geral de Proteção de Dados (RGPD).
+                          </div>
                       </div>
                   </div>
                   <div class="form-group col-lg-3 col-md-4 col-sm-5">
@@ -548,18 +558,7 @@
       </div>
     </section>
 
-   
-
-
-
-
-
-
-
-
-
-
-        <div class="container-fluid">
+    <div class="container-fluid">
           <div class="row contador">
             <div class="container">
               <div class="row">
@@ -592,7 +591,7 @@
               </div>
             </div>
           </div>
-        </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -659,6 +658,26 @@
       let breakpoint1 = window.matchMedia("(max-width: 991.98px)");
       oradoresBreak(breakpoint1)
       breakpoint1.addListener(oradoresBreak);
+
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+              form.classList.add('was-validated');
+              event.preventDefault();
+              }, false);
+            });
+          }, false);
+      })();
 
     /* Contador */
       var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
