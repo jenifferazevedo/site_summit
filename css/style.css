@@ -1,44 +1,27 @@
+a, li {
+    color: black;
+    list-style: none;
+}
+a:hover {
+    text-decoration: none;
+    color:#117711;
+}
 /* Navbar */
 .navbar{
     height: 80px;
     width: 100%;
     background-color: white;
-    position: fixed;
-    top: 0;
-    z-index: 20;
 }
-.navbar-brand {
-    width: 25%;
-    margin-left: 1rem;
-}
+
 .navbar-brand img {
     width: 100%;
     min-width: 200px;
     max-width: 350px;
 }
-.navbar-nav{
-    width: 100%;
-    justify-content: flex-end;
+.navbar-nav {
+    background-color: white;
 }
-.navbar-expand-lg .navbar-collapse {
-    text-align: right;
-}
-.navbar-light .navbar-nav .nav-link.active::after {
-    content: '';
-    width: 80%;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    background-color: black;
-}
-.navbar-light .navbar-nav .nav-link{
-    color: black;
-    position: relative;
-    padding: .5rem 1rem 0rem 1rem;
-    white-space: nowrap;
-    text-align: right;
-}
+    
 .navbar-light .navbar-nav .nav-link:hover{
     color: #117711;
     font-weight: bold;
@@ -47,12 +30,23 @@
     color: black;
     padding-top: .1rem;
 }
+
 button.chamada {
     background-color: #117711;
     border-radius: 3px;
     border: none;
     color: white;
     padding: .5rem 1rem;
+}
+/*Detalhe do active*/
+.navbar-light .navbar-nav .nav-link.active::after {
+    content: '';
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    background-color: black;
 }
 
 
@@ -281,6 +275,10 @@ button.chamada {
     top: 15px;
     right: 2%;
 }
+#faq .card li {
+    text-decoration: underline ;
+}
+
 button {
     box-shadow: none;
     border: none;
@@ -407,12 +405,6 @@ button {
 
 /*Media Queries Jeniffer*/
 @media (max-width: 991.98px) { 
-    .navbar-nav {
-    background-color: white;
-    width: 40%;
-    margin-left: 60%;
-    padding-bottom: 10px;
-    }
     .navbar-light .navbar-nav .nav-link.active::after {
     width: 0;
     height: 0;
@@ -427,7 +419,7 @@ button {
     padding: .5rem 0 ;
     }
     .cardshow {
-        display: flex;
+    display: flex;
     }
     /*.horarios h3 {
         margin: 0 65% 0 10%;
