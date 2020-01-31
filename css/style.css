@@ -1,3 +1,4 @@
+/*Tags gerais*/
 a, li {
     color: black;
     list-style: none;
@@ -23,6 +24,9 @@ h5 {
     margin-top: 5px;
     font-size: .9em;
 }
+p {
+    font-size: 1em;
+}
 
 
 /* Navbar */
@@ -32,6 +36,9 @@ h5 {
     background-color: white;
     padding: 0;
     text-align: right;
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.24);
+    box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.24);
 }
 .navbar-brand {
     display: inline-flex;
@@ -73,6 +80,11 @@ button.chamada {
     padding: .5rem .8rem;
 }
 /*Detalhe do active*/
+.navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #117711;
+}
+
 .navbar-light .navbar-nav .nav-link.active::after {
     content: '';
     width: 80%;
@@ -80,10 +92,8 @@ button.chamada {
     position: absolute;
     bottom: 0;
     left: 10%;
-    background-color: black;
+    background-color: #117711;
 }
-
-
 /* INICIO */
 .pginicio {
     margin-top: 80px;
@@ -94,18 +104,22 @@ button.chamada {
     min-height: 300px;
     padding: 0;
     margin-bottom: 30px;
-    position: relative;
     overflow: hidden;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: center;
 } /* classe criada por Jeni */
 .bgfoto1 img:nth-child(1) {
     width: 100%;
     min-width: 800px;
+    position: relative;
+    display: inline-flex;
 }
 .bgfoto1 img:nth-child(2) {
     position: absolute;
-    top: 11.5%;
-    right: 32.5%;
-    display: block;
+    display: inline-flex;
+    align-self: center;
     width: 35%;
     min-width: 300px;
 }  
@@ -191,6 +205,9 @@ button.chamada {
 .cardshow {
     display: none;
 }
+.cardhidden {
+    display: flex;
+}
 .carousel-item {
     width: 100%;
 }
@@ -214,10 +231,16 @@ button.chamada {
     padding-top: 3rem;
 }
 #oradores3 {
-    padding: 2rem 3rem 0 3rem;
+    padding: 2rem 2.5% 0 2.5%;
+    margin: 0;
 }
 #todosoradores {
-    padding: 0rem 3rem 2rem 3rem ;
+    padding: 0rem 2.5% 2rem 2.5%;
+    margin: 0;
+}
+.veroradores {
+    width: 100%;
+    margin: 0;
 }
 /* CRONOGRAMA */
 #cronograma {
@@ -226,9 +249,17 @@ button.chamada {
 #cronograma h2 {
     margin: 0 auto;
 }
+#cronograma h3 {
+    font-size: 1.7em;
+    padding: .5rem .8rem;
+    background-color: #5199DB;
+    display: inline-flex;
+    color: white;
+    margin: 2rem 20% 0 20%;
+}
 .horarios {
     background-color: rgba(196, 196, 196, .1);
-    padding: 20px;
+    padding: 0 2.5% 25px 2.5%;
     margin: 20px 0;
 }
 .horas {
@@ -236,14 +267,17 @@ button.chamada {
     background-color: #5199DB;
     font-size: 1.7em;
     font-weight: bolder;
-    margin-top: 130px;
+    margin-top: 8rem;
     text-align: center;
     color: white;
+}
+.horas:nth-child(1) {
+    margin-top: 10rem;
 }
 .horas.horasLinha::before {
     content: '';
     width: 5px;
-    height: 380px;
+    height: 360px;
     background-color: #5199DB;
     position: absolute;
     z-index: -1;
@@ -280,7 +314,7 @@ button.chamada {
     margin-top: 40px;
 }
 #recruitment .conteudo {
-    margin: 20px 2% 0 2%;
+    margin: 0
 }
 #recruitment .card {
     margin: 20px;
@@ -304,7 +338,6 @@ button.chamada {
 #faq .card li {
     text-decoration: underline ;
 }
-
 button {
     box-shadow: none;
     border: none;
@@ -319,7 +352,7 @@ button {
 }
 #inscricao {
     background-color: rgba(196, 196, 196, .1);
-    padding: 0 30px 30px 30px;
+    padding: 0 2.5% 30px 2.5%;
     margin-top: 40px;
 }
 #inscricao h2 {
@@ -330,13 +363,20 @@ button {
     padding: 0 5%;
 }
 #inscricao .mapa {
-    margin-top: 30px;
+    margin: 30px 0 0 0;
     width: 100%;
     text-align: center;
+    overflow: hidden;
 }
 #inscricao .mapa iframe {
     width: 70%;
-    min-width: 300px;
+    height: auto;
+    min-width: 280px;
+    min-height: 350px;
+    margin: 0 auto;
+}
+.margin0 {
+    margin: 0;
 }
 
 /*FINAL DA PAGINA*/
@@ -357,14 +397,25 @@ button {
 #footer a {
     color: white;
 }
+#footer a:hover {
+    text-decoration: underline;
+}
 #footer p {
     font-size: .7em;
+}
+#turma a {
+    display: inline-flex;
+    padding: 1rem;
+    background-color: rgb(151, 51, 177);
+    border-radius: 5px;
 }
 #redesSociais {
     text-align: center;
 }
 #redesSociais img {
-    padding-top: 20px;
+    padding-top: 1rem;
+    width: 50%;
+    max-width: 60px;
 }
 #logosFooter {
     text-align: center;
@@ -448,6 +499,9 @@ button {
     .cardshow {
     display: flex;
     }
+    .cardhidden {
+    display: none;
+    }
     /*.horarios h3 {
         margin: 0 65% 0 10%;
     }*/
@@ -469,6 +523,9 @@ button {
         font-size: 1em;
         padding: 1rem 0;
     }
+    #logosFooter{
+        margin-top: 10px;
+    }
 
 }
 @media (max-width: 600px) { 
@@ -476,11 +533,8 @@ button {
         padding-right: 40px;
         padding-left: 40px;
     }
-    .bgfoto1 img:nth-child(2){
-        left: 22.5%;
-    }
     .pgfinal {
-        margin-bottom: 250px;
+        margin-bottom: 120px;
     }
     .contador {
         height: auto;
@@ -496,15 +550,30 @@ button {
     .contador button.chamada {
         margin-top:  .6rem;
     }
+    #logosFooter{
+        margin-top: 20px;
+    }
 }
-@media (max-width: 420px) { 
-    .bgfoto1 img:nth-child(2){
-        left: 15%;
+@media (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+    .pgfinal {
+        margin-bottom: 110px;
+    }
+    #turma {
+        text-align: center;
     }
 }
 @media (max-width: 360px) { 
-    .bgfoto1 img:nth-child(2){
-        left: 11%;
+    .horarios {
+        padding: 0 0 25px 0;
+    }
+    .horas {
+       margin-top: 10rem;
+    }
+    .horas.horasLinha::before {
+        height: 400px;
     }
     .contador {
         padding: 0 2%;
@@ -513,11 +582,6 @@ button {
         padding-left: 0;
     }
 
-}
-@media (max-width: 320px) { 
-    .bgfoto1 img:nth-child(2){
-        left: 7%;
-    } 
 }
 
 
