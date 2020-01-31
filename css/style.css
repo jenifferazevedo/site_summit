@@ -1,28 +1,72 @@
+a, li {
+    color: black;
+    list-style: none;
+}
+a:hover {
+    text-decoration: none;
+    color:#117711;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1em;
+}
+
 /* Navbar */
 .navbar{
-    height: 80px;
     width: 100%;
+    min-width: 315px;
     background-color: white;
-    position: fixed;
-    top: 0;
-    z-index: 20;
+    padding: 0;
+    text-align: right;
 }
 .navbar-brand {
-    width: 25%;
-    margin-left: 1rem;
+    display: inline-flex;
+    padding: 10px 0 10px 20px;
 }
 .navbar-brand img {
     width: 100%;
     min-width: 200px;
     max-width: 350px;
 }
-.navbar-nav{
-    width: 100%;
-    justify-content: flex-end;
+.navbar-toggler {
+    margin-right: 20px;
 }
-.navbar-expand-lg .navbar-collapse {
-    text-align: right;
+.navbar-nav {
+    background-color: white;
+    padding: 0 10px 0 0 ;
 }
+.navbar-light .navbar-nav .nav-link {
+    position: relative;
+    box-sizing: border-box;
+    color: black;
+    padding: .5rem .8rem 0 .8rem;
+}
+    
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #117711;
+    font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link:last-child{
+    color: black;
+    padding-top: 0;
+}
+
+button.chamada {
+    background-color: #117711;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    padding: .5rem .8rem;
+}
+/*Detalhe do active*/
 .navbar-light .navbar-nav .nav-link.active::after {
     content: '';
     width: 80%;
@@ -31,28 +75,6 @@
     bottom: 0;
     left: 10%;
     background-color: black;
-}
-.navbar-light .navbar-nav .nav-link{
-    color: black;
-    position: relative;
-    padding: .5rem 1rem 0rem 1rem;
-    white-space: nowrap;
-    text-align: right;
-}
-.navbar-light .navbar-nav .nav-link:hover{
-    color: #117711;
-    font-weight: bold;
-}
-.navbar-light .navbar-nav .nav-link:last-child{
-    color: black;
-    padding-top: .1rem;
-}
-button.chamada {
-    background-color: #117711;
-    border-radius: 3px;
-    border: none;
-    color: white;
-    padding: .5rem 1rem;
 }
 
 
@@ -84,14 +106,14 @@ button.chamada {
 /* Classe do background inicial dos subtitulos */
 .bgfoto2 {
     width: 100%;
-    height: 300px;
+    max-height: 300px;
+    min-height: 140px;
     padding: 0;
-    margin: 30px 0;
     overflow: hidden;
 }
 .bgfoto2 img {
     width: 100%;
-    transform: translate(0, -20%);
+    min-width: 700px;
 }
 
 .titulo {
@@ -114,7 +136,7 @@ button.chamada {
     padding: .4rem 1.5rem;
     color: white;
     display: block;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 20px auto;
     border-radius: 2px;
 
 }
@@ -125,24 +147,43 @@ button.chamada {
 }
 
 /*CONFERENCIA*/
+#conferencia {
+    margin-top: 70px;
+}
+.conteudo {
+    margin: 30px 0 20px 0;
+}
 .oradores {
     background-color: rgba(196, 196, 196, .1);
 }
-.card {
+.card.orador {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 10px 20px; 
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 2rem;
+    cursor: pointer;
 }
-.cardimg {
+.card.orador h4, .card h4 {
+    margin: 0;
+}
+.card.orador .cardimg {
     background-color: gray;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
     overflow: hidden;
+}
+.card.orador a {
+    text-align: left;
+}
+.card.orador a img {
+    width: 18%;
+}
+.cardshow {
+    display: none;
 }
 .carousel-item {
     width: 100%;
@@ -174,7 +215,7 @@ button.chamada {
 }
 /* CRONOGRAMA */
 #cronograma {
-    padding: 30px 0;
+    margin-top: 30px;
 }
 #cronograma h2 {
     margin: 0 auto;
@@ -183,13 +224,6 @@ button.chamada {
     background-color: rgba(196, 196, 196, .1);
     padding: 20px;
     margin: 20px 0;
-}
-.horarios h3 {
-    text-align: center;
-    color: white;
-    padding: .5rem 0;
-    margin: 0 35%;
-    background-color: #5199DB;
 }
 .horas {
     width: 100%;
@@ -209,15 +243,134 @@ button.chamada {
     z-index: -1;
 }
 .horarios .cardAssunto {
+    min-height: 135px;
     background-color: white;
     padding: 10px;
     margin-top: 30px;
 }
-/*FINAL DA PAGINA*/
-.pgfinal {
-    margin-bottom: 130px;
+
+/*EXPOSICAO*/
+#exposicao {
+    margin-top: 70px;
+}
+.exposicao_mapa {
+    width: 100%;
+    background-color: rgba(196, 196, 196, .1);
+    padding: 5% 5%;
+    margin: 0;
+    overflow: hidden;
+}
+.exposicao_mapa img {
+    width: 100%;
 }
 
+/* SPEED RECRUITMENT */
+#speedrecruitment {
+    margin-top: 70px;
+}
+#recruitment {
+    background-color: rgba(196, 196, 196, .1);
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+#recruitment .conteudo {
+    margin: 20px 2% 0 2%;
+}
+#recruitment .card {
+    margin: 20px;
+}
+.card-header.faq {
+    color: white;
+    background-color: #5CB85C;
+    cursor: pointer;
+}
+.card-header.faq p {
+    margin: 0;
+    font-size: .8em;
+    font-weight: normal;
+}
+.card-header.faq img {
+    width: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 2%;
+}
+#faq .card li {
+    text-decoration: underline ;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+}
+
+/*PRE INSCRICAO*/
+#preInscricao {
+    margin-top: 70px;
+}
+#preInscricao .chamada:hover {
+    color: white;
+}
+#inscricao {
+    background-color: rgba(196, 196, 196, .1);
+    padding: 0 30px 30px 30px;
+    margin-top: 40px;
+}
+#inscricao h2 {
+    text-align: center;
+    padding: 15px 0;
+}
+#inscricao .textoForm {
+    padding: 0 5%;
+}
+#inscricao .mapa {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+#inscricao .mapa iframe {
+    width: 70%;
+    min-width: 300px;
+}
+
+/*FINAL DA PAGINA*/
+.pgfinal {
+    margin-bottom: 100px;
+}
+#footer {
+    background-color: #638A90;
+    padding: 20px 20px;
+    color: white;
+    margin-top: 70px;
+}
+#footer ul {
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+}
+#footer a {
+    color: white;
+}
+#footer p {
+    font-size: .7em;
+}
+#redesSociais {
+    text-align: center;
+}
+#redesSociais img {
+    padding-top: 20px;
+}
+#logosFooter {
+    text-align: center;
+}
+#logosFooter img {
+    width: 80px;
+    margin: 0 10px;
+}
+#logosFooter img:nth-child(2), #logosFooter img:nth-child(3){
+    height: 40px;
+    width: auto;
+}
 
 /* CONTADOR */
 .contador {
@@ -263,34 +416,36 @@ button.chamada {
     margin: 5% 0 0 0;
 }
 
-/* SPEED RECRUITMENT */
-.card-header.faq {
-    border: none;
-    box-shadow: none;
-}
 
 
 /*Media Queries Jeniffer*/
 @media (max-width: 991.98px) { 
+    .navbar-brand {
+    width: 65%;
+    }
     .navbar-nav {
-    background-color: white;
-    width: 40%;
-    margin-left: 60%;
-    padding-bottom: 10px;
+        padding: 0;
+    }
+    .navbar-light .navbar-nav .nav-link {
+    margin: 5px 0;
     }
     .navbar-light .navbar-nav .nav-link.active::after {
     width: 0;
     height: 0;
     }
-    .navbar-light .navbar-nav .nav-link{
-    padding: 10px;
-    }
     .contador button.chamada {
     margin-top:  1rem;
     }
     .contador p {
-    padding: .5rem 0 ;
+    padding: .5rem 0;
     }
+    .cardshow {
+    display: flex;
+    }
+    /*.horarios h3 {
+        margin: 0 65% 0 10%;
+    }*/
+
 }
 @media (max-width: 800px) {
     .contador button.chamada {
@@ -311,16 +466,12 @@ button.chamada {
 
 }
 @media (max-width: 600px) { 
-    .bgfoto1 img:nth-child(2){
-        left: 22.5%;
-    }
-    .conteudo{
+    #oevento .conteudo{
         padding-right: 40px;
         padding-left: 40px;
     }
-    .navbar-nav {
-        width: 70%;
-        margin-left: 35%;
+    .bgfoto1 img:nth-child(2){
+        left: 22.5%;
     }
     .pgfinal {
         margin-bottom: 250px;
