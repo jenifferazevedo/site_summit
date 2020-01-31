@@ -1,0 +1,44 @@
+### CREATE
+http:/localhost/api/create.php
+{
+    "email" : "antonio@gmail.com",
+    "nome" : "Antonio",
+    "apelido" : "Ferreira",
+    "status" : 2,
+    "datareg" : "2018-06-01"
+}
+
+### READ (all table regs)
+http:/localhost/api/read.php
+
+### READ_ONE (reads a specific line, by id)
+http:/localhost/api/read_one.php?id=1
+
+### READ_PAGING (Reads the table, outputs results 5 per page)
+http:/localhost/api/read_paging.php
+
+### UPDATE
+http:/localhost/api/update.php
+{
+    "id" : 1,	
+    "email" : "antonio@gmail.com",
+    "nome" : "Antonio",
+    "apelido" : "Ferreira",
+    "status" : 2,
+    "datareg" : "2018-06-01"
+}
+
+
+### DELETE
+http:/localhost/api/delete.php
+{
+    "id" : "106"
+}
+
+### SEARCH 
+(searchs a record by name, surname or email, returns whole record fields in JSON)
+http:/localhost/api/search.php?s=Paulo
+
+### VALIDATE
+http:/localhost/api/validate.php
+Post call, where post body is a simple string with "email codigo" (blank separated)

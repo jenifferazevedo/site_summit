@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <titulo>Formulario de inscrição</titulo>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <form action="api/registo/create.php" target="_self" methode="post">
+        Nome:<br><input type="text" name="nome" id="nome" weight=30><br>
+        Apelido:<br><input type="text" name="apelido" id="apelido" weight=30><br>
+        Email:<br><input type="text" name="email" id="email" weight=50><br>
+        Interesses:<br><input type="text" name="telefone" id="telefone" weight=15><br>
+        <select name="interests" multiple>
+              <option value="volvo">Web/FrontEnd</option>
+              <option value="saab">Web/BackEnd</option>
+              <option value="fiat">Multimedia</option>
+              <option value="audi">Hardware</option>
+        </select><br>
+        
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+
+    
+</body>
+</html>
