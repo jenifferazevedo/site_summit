@@ -14,10 +14,16 @@ h2 {
 }
 h3 {
     font-size: 1.5em;
+    margin: 0;
 }
 h4 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
+h5 {
+    margin-top: 5px;
+    font-size: .9em;
+}
+
 
 /* Navbar */
 .navbar{
