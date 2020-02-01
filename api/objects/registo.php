@@ -82,16 +82,35 @@ class Registo{
     $stmt->bindParam(":codigo", $this->codigo);
     $stmt->bindParam(":cod_confirm", $this->cod_confirm);    
     $stmt->bindParam(":consentimento", $this->consentimento);
-    // $stmt->bindParam(":datareg", $this->datareg);
+    
  
     // execute query
     if($stmt->execute()){
-        return true;
-        }
         
-    return false;
+        $user = $this->conn->lastInsertId();
+        
+        foreach($this->categoria as $cat) {
+            $query = "INSERT INTO
+                            reg_interest
+                        SET            
+                            user=:user, interest=:interest";
+
+            // prepare query
+            $stmt = $this->conn->prepare($query);
+
+            $cat = htmlspecialchars(strip_tags($cat));
+            $stmt->bindParam(":user", $user);  
+            $stmt->bindParam(":interest", $cat); 
+            
+            if($stmt->execute()) {
+                return true;            
+                }
+        }
     }
     
+    return false;
+}
+
 
     
     // used when filling up the update registo form

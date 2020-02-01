@@ -24,8 +24,10 @@ $registo = new Registo($db);
 $raw_data = file_get_contents("php://input");
 
 //get posted data
-//$data = json_decode($raw_data);
-echo $raw_data;
+if ($test) {
+    //$data = json_decode($raw_data);
+    echo $raw_data;
+}
 
 // make sure data is not empty
 if(
