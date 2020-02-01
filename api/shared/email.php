@@ -5,6 +5,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
        // Envio do email
         
         global $test;
+        global $test_email;
         global $external_url;
         
         // boundary 
@@ -161,7 +162,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
         $msg = wordwrap($msg,70);
 
         // send email
-        $to = ($test ? "joao.ledo.fonseca@gmail.com" : $email);
+        $to = (!empty($test_email) ? $test_email : $email);
         
         if (mail($to, "Summit 1.0 - V.N.G.", $msg, $headers)) {
             if ($test) {

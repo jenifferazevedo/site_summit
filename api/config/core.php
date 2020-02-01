@@ -5,6 +5,7 @@ error_reporting(E_ALL);
  
 // test mode on/off
 $test=TRUE ;
+$test_email="joao-ledo.fonseca@gmail.com";
 
 // home page url
 $home_url="http://localhost/api/";

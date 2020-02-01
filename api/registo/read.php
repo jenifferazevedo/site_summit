@@ -125,7 +125,7 @@ if($num>0){
 
 }
 
-// no products found will be here
+// no records found will be here
 else{
 
     // set response code - 404 Not found
