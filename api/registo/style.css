@@ -1,0 +1,28 @@
+body {
+    font-family: Tahomam, Arial, sans-serif;
+    font-size: 10pt;
+}
+
+table {
+    border-style: none;
+    background-color: lightgray;
+}
+
+td, th {
+    border-style: none;
+    text-align: left;
+    padding: 2px;
+}
+
+tr {
+    
+}
+
+.button {
+    box-sizing: border-box;
+    padding:5px;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 2px;
+    text-decoration: none;
+}
