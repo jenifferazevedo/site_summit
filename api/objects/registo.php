@@ -26,24 +26,46 @@ class Registo{
     
     
     // read registos
-    function read(){
+    function read() {
+ 
+        // select all query
+        $query = "SELECT
+                    r.id, r.email, r.nome, r.apelido, r.telefone, r.status, r.codigo, r.cod_confirm, r.consentimento, r.datareg
+                FROM
+                    " . $this->table_name . " r
+                ORDER BY
+                    r.datareg DESC";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+    
+    
+    // read registos
+    function read_categorias($user){
  
     // select all query
-    $query = "SELECT
-                r.id, r.email, r.nome, r.apelido, r.telefone, r.status, r.codigo, r.cod_confirm, r.consentimento, r.datareg
-            FROM
-                " . $this->table_name . " r
-            ORDER BY
-                r.datareg DESC";
+    $query = "SELECT s.name FROM interest s
+                JOIN reg_interest r ON r.interest = s.id
+                WHERE r.user = ?
+                ORDER BY s.name DESC";
  
     // prepare query statement
     $stmt = $this->conn->prepare($query);
- 
+    $stmt->bindParam(1, $user);
+        
     // execute query
     $stmt->execute();
  
     return $stmt;
     }
+    
+    
     
     
     
@@ -85,29 +107,27 @@ class Registo{
     
  
     // execute query
+        
     if($stmt->execute()){
         
         $user = $this->conn->lastInsertId();
-        
-        foreach($this->categoria as $cat) {
-            $query = "INSERT INTO
+        $query = "INSERT INTO
                             reg_interest
                         SET            
                             user=:user, interest=:interest";
 
             // prepare query
-            $stmt = $this->conn->prepare($query);
+        $stmt = $this->conn->prepare($query);
 
+        $stmt->bindParam(":user", $user);  
+        $stmt->bindParam(":interest", $cat); 
+        foreach($this->categoria as $cat) {
             $cat = htmlspecialchars(strip_tags($cat));
-            $stmt->bindParam(":user", $user);  
-            $stmt->bindParam(":interest", $cat); 
-            
             if($stmt->execute()) {
-                return true;            
-                }
+            }
         }
+        return true;
     }
-    
     return false;
 }
 
@@ -259,26 +279,34 @@ class Registo{
     
     // delete the registo
     function delete(){
- 
-    // delete query
-    $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
- 
-    // prepare query
-    $stmt = $this->conn->prepare($query);
- 
-    // sanitize
-    $this->id=htmlspecialchars(strip_tags($this->id));
- 
-    // bind id of record to delete
-    $stmt->bindParam(1, $this->id);
- 
-    // execute query
-    if($stmt->execute()){
-        return true;
-    }
- 
-    return false;
-     
+        // delete query
+        $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
+
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $this->id=htmlspecialchars(strip_tags($this->id));
+
+        // bind id of record to delete
+        $stmt->bindParam(1, $this->id);
+
+        // execute query
+        if($stmt->execute()){
+            
+            //delete the category conection table
+            $query = "DELETE FROM reg_interest
+                            WHERE user = ?";
+
+            // prepare query
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(1, $this->id); 
+
+            if( $stmt->execute() ) {
+            }   
+            return true;
+        }
+        return false;
     }
     
     

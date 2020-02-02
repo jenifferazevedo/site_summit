@@ -24,10 +24,12 @@ $registo = new Registo($db);
 $raw_data = file_get_contents("php://input");
 
 //get posted data
+/*
 if ($test) {
     //$data = json_decode($raw_data);
     echo $raw_data;
 }
+*/
 
 // make sure data is not empty
 if(
@@ -48,21 +50,13 @@ if(
     $registo->cod_confirm = mt_rand(10000,99999);
     $registo->consentimento = $_POST["consentimento"];
     
-     if ($test) { 
-         echo "\n" . $_POST["consentimento"] . "\n\n"; 
-     }; 
     
     if (!empty($_POST["categoria"])) { 
         $categorias = $_POST["categoria"];
         foreach ( $categorias as $cat_id) {
             array_push($registo->categoria, $cat_id);
-            if ($test) { 
-                echo "Categoria= " . $cat_id . "\n";
-            };
-        };
-            // echo "Categoria = " .$cat_id . "\n";
-            
-    };
+        }  
+    }
     
     // create the registo
     if($registo->create()){

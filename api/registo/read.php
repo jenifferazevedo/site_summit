@@ -33,7 +33,7 @@ $db = $database->getConnection();
 $registo = new Registo($db);
 
 // read registos will be here
-// query products
+// query registos
 $stmt = $registo->read();
 $num = $stmt->rowCount();
 
@@ -53,6 +53,28 @@ if($num>0){
         // just $name only
         extract($row);
 
+        // Lê as categorias para a linha
+        
+        echo "Id=" .$id . "\n";            
+        
+        $registo_cat = array();
+        $stmt_cat = $registo->read_categorias($id);
+        $num = $stmt_cat->rowCount();
+        
+        echo "Num=". $num . "\n";
+            
+        if ($num>0) {   
+            while ($row = $stmt_cat->fetch(PDO::FETCH_ASSOC)){
+                // extract row
+                // this will make $row['name'] to
+                // just $name only
+                extract($row);
+                array_push($registo_cat,$name);
+                
+            }
+        
+        }
+
         $registo_item=array(
             "id" => $id,
             "email" => $email,
@@ -62,35 +84,37 @@ if($num>0){
             "codigo" => $codigo,
             "cod_confirm" => $cod_confirm, 
             "consentimento" => $consentimento,
-            "datareg" => $datareg
+            "datareg" => $datareg,
+            "categorias" => $registo_cat
         );
-
+        
+        
         array_push($registo_arr["records"], $registo_item);
     }
 
     // set response code - 200 OK
     http_response_code(200);
 
-            echo "<table style=\"width=80%\" border=\"none\" align=\"center\">";
-            echo "<tr style=border=\"2px solid gray\">";
-            echo "<th>" . "id"          . "</th>"; 
-            echo "<th>" . "email"       . "</th>";
-            echo "<th>" . "nome"        . "</th>";
-            echo "<th>" . "apelido"     . "</th>"; 
-            echo "<th>" . "status"      . "</th>"; 
-            echo "<th>" . "codigo"      . "</th>"; 
-            echo "<th>" . "cod_confirma"    . "</th>"; 
-            echo "<th>" . "consentimento"   . "</th>";
-            echo "<th>" . "Datareg"   . "</th>";
-            echo "<th>" . "Confirmar"   . "</th>";
-            echo "<th>" . "CheckIn"   . "</th>";
-            echo "<th>" . "Anula"   . "</th>";
-            echo "</tr>";
+    echo "<table style=\"width=80%\" border=\"none\" align=\"center\">";
+    echo "<tr style=border=\"2px solid gray\">";
+    echo "<th>" . "id"          . "</th>"; 
+    echo "<th>" . "email"       . "</th>";
+    echo "<th>" . "nome"        . "</th>";
+    echo "<th>" . "apelido"     . "</th>"; 
+    echo "<th>" . "status"      . "</th>"; 
+    echo "<th>" . "codigo"      . "</th>"; 
+    echo "<th>" . "cod_confirma"    . "</th>"; 
+    echo "<th>" . "consentimento"   . "</th>";
+    echo "<th>" . "Datareg"   . "</th>";
+    echo "<th>" . "Confirmar"   . "</th>";
+    echo "<th>" . "CheckIn"   . "</th>";
+    echo "<th>" . "Anula"   . "</th>";
+    echo "</tr>";
     // show products data in json format
     //echo json_encode($registo_arr);
     foreach ($registo_arr as $linha) {
         foreach ($linha as $campo) {
-
+            
             $p_confirma = "email=" . $campo["email"] . "&" . "confirma=" . $campo["cod_confirm"];
             $p_checkin =  "email=" . $campo["email"] . "&" . "codigo="   . $campo["codigo"];
             $p_cancela =  "email=" . $campo["email"] . "&" . "confirma=" . $campo["cod_confirm"];
@@ -115,6 +139,14 @@ if($num>0){
             echo "<td>" . $botao_checkin. "</td>";
             echo "<td>" . $botao_cancela . "</td>";
             echo "</tr>";
+            
+            
+            $cat = "";
+            foreach ($campo["categorias"] as $nome_cat) {
+                    $cat .= $nome_cat . ",";
+            }
+            echo "<tr><td colspan=12>" . $cat . "</td></tr>";
+            
         } 
         echo "<tr>";
         echo "<td cellspan=12>" . $botao_refresh . "</td>";
