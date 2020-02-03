@@ -17,7 +17,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
         $headers = "MIME-Version: 1.0 \r\n"; 
         $headers .= "Content-Type: multipart/mixed;"; 
         $headers .= " boundary=\"{$mime_boundary}\"\r\n";
-   
+        $msg = "";
     
         switch ($tipo) {
             case 1: // Registo aceite, pede confirmacao

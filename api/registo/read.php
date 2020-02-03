@@ -53,15 +53,12 @@ if($num>0){
         // just $name only
         extract($row);
 
-        // Lê as categorias para a linha
-        
-        echo "Id=" .$id . "\n";            
+        // Lê as categorias para a linha        
         
         $registo_cat = array();
         $stmt_cat = $registo->read_categorias($id);
         $num = $stmt_cat->rowCount();
         
-        echo "Num=". $num . "\n";
             
         if ($num>0) {   
             while ($row = $stmt_cat->fetch(PDO::FETCH_ASSOC)){
@@ -145,7 +142,7 @@ if($num>0){
             foreach ($campo["categorias"] as $nome_cat) {
                     $cat .= $nome_cat . ",";
             }
-            echo "<tr><td colspan=12>" . $cat . "</td></tr>";
+            echo "<tr><td colspan=8 align=right><span class=cat>" . $cat . "</span></td><td colspan=3><td></tr>";
             
         } 
         echo "<tr>";

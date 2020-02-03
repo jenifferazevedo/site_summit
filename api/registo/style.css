@@ -4,18 +4,28 @@ body {
 }
 
 table {
-    border-style: none;
-    background-color: lightgray;
+    border-style: none; 
+}
+
+th {
+    line-height: 20px;
 }
 
 td, th {
     border-style: none;
-    text-align: left;
+    text-align: right;
     padding: 2px;
+    background-color: lightgray;
 }
 
 tr {
     
+}
+
+.cat {
+    font-size: 11px;
+    border-bottom: 2px, solid, white;
+
 }
 
 .button {
