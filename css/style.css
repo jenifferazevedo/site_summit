@@ -179,11 +179,14 @@ button.chamada {
 .card.orador {
     width: 100%;
     text-align: center;
-    padding: 20px 20px 10px 20px; 
+    padding: 20px 15px 10px 15px; 
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 2rem;
     cursor: pointer;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
 }
 .card.orador h4, .card h4 {
     margin: 0;
@@ -195,6 +198,15 @@ button.chamada {
     border-radius: 50%;
     margin: 0 auto 10px auto;
     overflow: hidden;
+}
+.card.orador img {
+    width: 150px;
+}
+.card.orador img.fotop {
+    height: 160px;
+    width: auto;
+    max-width: auto;
+    transform: translate(-20%, 0);
 }
 .card.orador a {
     text-align: left;
