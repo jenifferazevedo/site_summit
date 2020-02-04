@@ -210,17 +210,18 @@ class Registo{
 
         // get retrieved row
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // set values to object properties
-        $this->id = $row['id'];
-        $this->email = $row['email'];
-        $this->nome = $row['nome'];
-        $this->apelido = $row['apelido'];
-        $this->telefone = $row['telefone'];
-        $this->status = $row['status'];
-        $this->codigo = $row['codigo'];
-        $this->cod_confirm = $row['cod_confirm'];
-        $this->consentimento = $row['consentimento'];
+        if ( !empty($row) ) {
+            // set values to object properties
+            $this->id = $row['id'];
+            $this->email = $row['email'];
+            $this->nome = $row['nome'];
+            $this->apelido = $row['apelido'];
+            $this->telefone = $row['telefone'];
+            $this->status = $row['status'];
+            $this->codigo = $row['codigo'];
+            $this->cod_confirm = $row['cod_confirm'];
+            $this->consentimento = $row['consentimento'];
+        }
     }
     
 
