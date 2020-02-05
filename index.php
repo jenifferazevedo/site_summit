@@ -723,7 +723,7 @@
             rerum.</p>
         </div>
         <div class="col-md-8 col-sm-12">
-          <form class="needs-validation form-group" novalidate>
+          <form class="needs-validation form-group" method="post" action="./api/registo/create.php" novalidate>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" class="form-control" id="" value="" required placeholder="Nome">
@@ -733,7 +733,7 @@
               </div>
             </div>
             <div class="form-row">
-              <!--DUVIDA: colocar type email?-->
+              <!--DUVIDA: colocar type email? Resposta: Sim!-->
               <div class="form-group col">
                 <input type="email" class="form-control" id="" value="" required placeholder="@E-mail">
                 <div class="invalid-feedback">
@@ -742,7 +742,7 @@
               </div>
             </div>
             <div class="form-row">
-              <!--DUVIDA: colocar "pattern="^\d{3}\d{3}\d{3}$" como condição para número válido"-->
+              <!--DUVIDA: colocar "pattern="^\d{3}\d{3}\d{3}$" como condição para número válido" Resposta: SIM!!! -->
               <div class="form-group col">
                 <input type="text" class="form-control" id="" value="" required placeholder="Telefone/Telemóvel">
                 <div class="invalid-feedback">
@@ -752,13 +752,35 @@
             </div>
             <div class="form-row">
               <div class="form-group col">
-                <select class="custom-select" required>
+                <select class="custom-select" name="categoria[]" id="categoria" multiple="multiple" required>
                   <option selected disabled value="">Escolhe a tua area de interesse </option>
+                  <!--
                   <option>1...</option>
                   <option>2...</option>
                   <option>3...</option>
                   <option>4...</option>
                   <option>5...</option>
+                    -->
+                    <?php 
+                        include_once './api/config/database.php';
+                        $db = New Database();
+
+                        // get database connection
+                        $con = mysqli_connect($db->host,$db->username,$db->password,$db->db_name);
+
+                        if (mysqli_connect_errno()) {
+                          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                          exit();
+                        }
+                        $sql = mysqli_query($con, "SELECT id, name FROM interest");
+
+                        while ($row = $sql->fetch_assoc()){
+                            $id_categoria=  $row["id"] ;
+                            $nome_categoria =  $row["name"] ;
+
+                            echo '<option value="' . $id_categoria  . '">' . $nome_categoria . '</option>';
+                        }
+                    ?>
                 </select>
                 <div class="invalid-feedback">
                   Por favor, selecione uma area de interesse.
