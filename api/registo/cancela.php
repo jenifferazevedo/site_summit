@@ -45,7 +45,7 @@ if (!empty($registo->nome)) {
         
     }
 
-    // if unable to delete the product
+    // if unable to delete the registo
     else{
 
         // set response code - 503 service unavailable
@@ -56,6 +56,11 @@ if (!empty($registo->nome)) {
     }
 } else {
     
+    // set response code - 503 service unavailable
+    http_response_code(503);
+
+    // tell the user
+    echo json_encode(array("message" => "Unable to delete registo."));
     
 }
 ?>

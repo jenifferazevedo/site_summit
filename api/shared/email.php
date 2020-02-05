@@ -5,7 +5,6 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
        // Envio do email
         
         global $test;
-        global $test_email;
         global $external_url;
         
         // boundary 
@@ -17,7 +16,8 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
         $headers = "MIME-Version: 1.0 \r\n"; 
         $headers .= "Content-Type: multipart/mixed;"; 
         $headers .= " boundary=\"{$mime_boundary}\"\r\n";
-        $msg = "";
+   
+        $msg="";
     
         switch ($tipo) {
             case 1: // Registo aceite, pede confirmacao
@@ -27,11 +27,10 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
 
                 // prepara o corpo da mensagem em HTML
                 $msg_body  = "<html><head></head><body>";
-                $msg_body .= "<br><p>O seu registo no Summit 1.0 foi recebido. ";
+                $msg_body .= "<br><p>O seu pré-registo no Summit 1.0 foi recebido. ";
                 $msg_body .= "No entanto só se tornará válido após confirmação.</p>";
-                $msg_body .= "<p>Por favor confirme a inscrição clicando no seguinte link: ";
+                $msg_body .= "<p><b>Por favor confirme<b> a inscrição clicando no seguinte link: ";
                 $msg_body .= $link . "</p>";
-                $msg_body .= 
                 $msg_body .= "<p>Obrigado</p><br>";
                 $msg_body .= "</body></html>";
 
@@ -41,7 +40,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
                 $msg .= "Content-Transfer-Encoding: 8bit\n\n"; 
                 $msg .= "\n" . $msg_body . "\n\n"; 
                 $msg .= "\r\n--{$mime_boundary}--\r\n";
-
+                
                 break;
                 
             case 2: // Confirmacão aceite, agradecimento, com QR e Link de cancelamento da inscrição
@@ -93,12 +92,12 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
             case 3: // Já estava confirmadom QR e Link de anulacao
                 
                 // prepara link de cancelamento a incluir no email
-                $link = "<a href=" . $external_url . "registo/cancela.php?confirma=" . $cod_confirm ."&email=". $email . "><b> Quero cancelar a inscrição!</b></a>";
+                $link = "<a href=" . $external_url . "registo/cancela.php?confirma=" . $cod_confirm ."&email=". $email . "><b>Quero cancelar a inscrição!</b></a>";
 
                 // prepara o corpo da mensagem em HTML
                 $msg_body  = "<html><head></head><body>";
                 $msg_body .= "<br><p>O seu registo no Summit 1.0 já se encontrava válido e confirmado. </p>";
-                $msg_body .= "Se pretender cancelar esta inscrição, por favor clique no seguinte link";
+                $msg_body .= "Se pretender cancelar esta inscrição, por favor clique no seguinte link: ";
                 $msg_body .= $link . "</p>";
                 $msg_body .= "<p>Recordamos que na entrada do evento deverá apresentar o \"QR Code\" que lhe foi anteirormente enviado, constituindo a prova da inscrição e sua identidade.</p>";
                 $msg_body .= "<p>Obrigado</p><br>";
@@ -162,7 +161,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
         $msg = wordwrap($msg,70);
 
         // send email
-        $to = (!empty($test_email) ? $test_email : $email);
+        $to = ($test ? "joao.ledo.fonseca@gmail.com" : $email);
         
         if (mail($to, "Summit 1.0 - V.N.G.", $msg, $headers)) {
             if ($test) {

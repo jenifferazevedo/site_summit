@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
  
 // test mode on/off
-$test=FALSE ;
+$test=TRUE ;
 $test_email="joao.ledo.fonseca@gmail.com";
 
 // home page url
