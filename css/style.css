@@ -47,7 +47,7 @@ p {
 .navbar-brand img {
     width: 100%;
     min-width: 200px;
-    max-width: 350px;
+    max-width: 300px;
 }
 .navbar-toggler {
     margin-right: 20px;
@@ -165,7 +165,54 @@ button.chamada {
     color: #5CB85C;
     border: 1px solid #5CB85C;
 }
+/*NOTICIAS*/
+#noticias {
+    margin-top: 70px;
+}
+#noticias a {
+    width: 100%;
+}
+#noticiasshow {
+    padding: 2rem 2.5% 0 2.5%;
+    margin: 0;
+    width: 100%;
+}
+#noticias2 {
+    padding: 0 2.5% 0 2.5%;
+    margin: 0;
+    width: 100%;
+}
+.noticias {
+    background-color: rgba(196, 196, 196, .1);
+}
+.card.noticias {
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    text-align: left;
+    padding: 20px 15px 10px 15px; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
 
+.card.noticias .cardimg {
+    width: 90%;
+    height: 180px;
+    background-color: gray;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+    display: block;
+}
+.card.noticias .cardContent{
+    padding: 0 15px;
+}
 /*CONFERENCIA*/
 #conferencia {
     margin-top: 70px;
@@ -176,8 +223,13 @@ button.chamada {
 .oradores {
     background-color: rgba(196, 196, 196, .1);
 }
+.oradores .headoradores {
+    margin: 15px 0 0 20px;
+}
 .card.orador {
     width: 100%;
+    height: 370px;
+    overflow: hidden;
     text-align: center;
     padding: 20px 15px 10px 15px; 
     border-radius: 5px;
@@ -192,12 +244,13 @@ button.chamada {
     margin: 0;
 }
 .card.orador .cardimg {
-    background-color: gray;
     width: 150px;
     height: 150px;
+    background-color: gray;
     border-radius: 50%;
     margin: 0 auto 10px auto;
     overflow: hidden;
+    display: block;
 }
 .card.orador img {
     width: 150px;
@@ -205,7 +258,6 @@ button.chamada {
 .card.orador img.fotop {
     height: 160px;
     width: auto;
-    max-width: auto;
     transform: translate(-20%, 0);
 }
 .card.orador a {
@@ -214,33 +266,14 @@ button.chamada {
 .card.orador a img {
     width: 18%;
 }
+.cardContent {
+    height: 180px;
+}
 .cardshow {
     display: none;
 }
 .cardhidden {
     display: flex;
-}
-.carousel-item {
-    width: 100%;
-}
-.carousel-item .card {
-    width: 30%;
-    float: left;
-    margin: 0 10px;
-}
-.control-prev {
-    position: absolute;
-    top: 45%;
-    right: 10%;
-}
-.control-next {
-    position: absolute;
-    top: 45%;
-    left: 10%;
-
-}
-#carouselOradores {
-    padding-top: 3rem;
 }
 #oradores3 {
     padding: 2rem 2.5% 0 2.5%;
@@ -250,10 +283,7 @@ button.chamada {
     padding: 0rem 2.5% 2rem 2.5%;
     margin: 0;
 }
-.veroradores {
-    width: 100%;
-    margin: 0;
-}
+
 /* CRONOGRAMA */
 #cronograma {
     margin-top: 30px;
