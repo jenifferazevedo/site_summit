@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
   <header class="container-fluid sticky-top">
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -723,19 +724,20 @@
             rerum.</p>
         </div>
         <div class="col-md-8 col-sm-12">
-          <form class="needs-validation form-group" method="post" action="./api/registo/create.php" novalidate>
+                                   
+          <form class="needs-validation form-group" method="post" action="./api/registo/create.php" target="registo_msg" novalidate>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" class="form-control" id="" value="" required placeholder="Nome">
+                <input type="text" class="form-control" name="nome" id="nome" value="" required placeholder="Nome">
               </div>
               <div class="form-group col-md-6">
-                <input type="text" class="form-control" id="" value="" required placeholder="Apelido">
+                <input type="text" class="form-control" name="apelido" id="apelido" value="" required placeholder="Apelido">
               </div>
             </div>
             <div class="form-row">
               <!--DUVIDA: colocar type email? Resposta: Sim!-->
               <div class="form-group col">
-                <input type="email" class="form-control" id="" value="" required placeholder="@E-mail">
+                <input type="email" class="form-control" name="email" id="email" value="" required placeholder="@E-mail">
                 <div class="invalid-feedback">
                   É necessário colocar um e-mail válido.
                 </div>
@@ -744,7 +746,7 @@
             <div class="form-row">
               <!--DUVIDA: colocar "pattern="^\d{3}\d{3}\d{3}$" como condição para número válido" Resposta: SIM!!! -->
               <div class="form-group col">
-                <input type="text" class="form-control" id="" value="" required placeholder="Telefone/Telemóvel">
+                <input type="text" class="form-control" name="telefone" id="telefone" value="" required placeholder="Telefone/Telemóvel">
                 <div class="invalid-feedback">
                   É necessário colocar um número de telefone válido, ex: 930899911.
                 </div>
@@ -790,7 +792,7 @@
             <div class="form-row">
               <div class="form-group col-lg-9 col-md-8 col-sm-7">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <input class="form-check-input" type="checkbox" value="" value="1" name="consentimento" id="invalidCheck" required>
                   <label class="form-check-label" for="invalidCheck">
                     Li e aceito o Regulamento Geral de Proteção de Dados (RGPD)
                   </label>
@@ -804,8 +806,11 @@
               </div>
             </div>
           </form>
-        
-          <iframe src="" frameborder="0" nome="registo" style="height:0px;"></iframe>
+      
+          <iframe src="" frameborder="0" name="registo_msg" style="height:100px; width:680px;">
+                
+          </iframe>
+
         </div>
 
       </div>
@@ -907,6 +912,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+    
   <script>
     /* Click nav */
     let navlink = $('.navbar-nav a');
@@ -991,7 +997,7 @@
               event.stopPropagation();
             }
             form.classList.add('was-validated');
-            event.preventDefault();
+            //event.preventDefault();
           }, false);
         });
       }, false);

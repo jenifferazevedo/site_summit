@@ -3,28 +3,20 @@
 <header>
     <title>Summit 1.0 V.N.Gaia</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./read_style.css">
 </header>
 <body>
 
-<!-- 
-//     required headers
-// header("Access-Control-Allow-Origin: *");
-// header("Content-Type: application/json; charset=UTF-8");
--->  
 
 <?php
-     
-// database connection will be here
 
 // include database and object files
 include_once '../config/database.php';
 include_once '../config/core.php';
 include_once '../objects/registo.php';
 
-
     
-// instantiate database and product object
+// instantiate database and registo object
 $database = new Database();
 $db = $database->getConnection();
     
@@ -92,23 +84,25 @@ if($num>0){
     // set response code - 200 OK
     http_response_code(200);
 
-    echo "<table style=\"width=80%\" border=\"none\" align=\"center\">";
-    echo "<tr style=border=\"2px solid gray\">";
-    echo "<th>" . "id"          . "</th>"; 
-    echo "<th>" . "email"       . "</th>";
-    echo "<th>" . "nome"        . "</th>";
-    echo "<th>" . "apelido"     . "</th>"; 
-    echo "<th>" . "status"      . "</th>"; 
-    echo "<th>" . "codigo"      . "</th>"; 
-    echo "<th>" . "cod_confirma"    . "</th>"; 
-    echo "<th>" . "consentimento"   . "</th>";
-    echo "<th>" . "Datareg"   . "</th>";
-    echo "<th>" . "Confirmar"   . "</th>";
-    echo "<th>" . "CheckIn"   . "</th>";
-    echo "<th>" . "Anula"   . "</th>";
+    echo "<table align=center>";
+    echo "<tr>";
+    echo "<th>" . "Id"              . "</th>"; 
+    echo "<th>" . "Nome"            . "</th>";
+    echo "<th>" . "Apelido"         . "</th>"; 
+    echo "<th>" . "email"           . "</th>";
+    echo "<th>" . "Status"          . "</th>"; 
+    echo "<th>" . "Codigo"          . "</th>"; 
+    echo "<th>" . "Cod.Confirmação" . "</th>"; 
+    echo "<th>" . "Consent."        . "</th>";
+    echo "<th>" . "Datareg"         . "</th>";
+    echo "<th>" . "Confirmar"       . "</th>";
+    echo "<th>" . "Anulação"        . "</th>";
+    echo "<th>" . "CheckIn"         . "</th>";
+
     echo "</tr>";
     // show products data in json format
     //echo json_encode($registo_arr);
+    
     foreach ($registo_arr as $linha) {
         foreach ($linha as $campo) {
             
@@ -116,39 +110,51 @@ if($num>0){
             $p_checkin =  "email=" . $campo["email"] . "&" . "codigo="   . $campo["codigo"];
             $p_cancela =  "email=" . $campo["email"] . "&" . "confirma=" . $campo["cod_confirm"];
             
-
-            $botao_confirma = "<a href=\"". $external_url . "registo/confirma.php?" . $p_confirma . "\" class=button target=\"_self\" >Confirma</a>";
-            $botao_checkin  = "<a href=\"". $external_url . "registo/validate.php?" . $p_checkin . "\"  class=button target=\"_self\">CheckIn</a>";
-            $botao_cancela  = "<a href=\"". $external_url . "registo/cancela.php?"  . $p_cancela . "\"  class=button target=\"_self\">Cancela Inscrição</a>";
-            $botao_refresh = "<a href=\"". $external_url . "registo/read.php?" . "\"  class=button target=\"_self\">Refresh</a>";
+            if ($campo["status"]==0)    
+                $botao_confirma = "<a href='". $external_url . "registo/confirma.php?" . $p_confirma . "'  class=button target='_self' >Confirma</a>";
+            else
+                 $botao_confirma = "Confirmado";
+            
+            if ($campo["status"]>0)    
+                $botao_checkin  = "<a href='". $external_url . "registo/validate.php?" . $p_checkin . "'  class=button target=\"_self\">CheckIn</a>";
+            else
+                $botao_checkin  = "Não Confirmado";
+            
+            if ($campo["status"]<2)
+                $botao_cancela  = "<a href='". $external_url . "registo/cancela.php?"  . $p_cancela . "'  class=button target='_self'>Cancela Inscrição</a>";
+            else
+                $botao_cancela  = " ";                
+            
+            $botao_refresh = "<a href='". $external_url . "registo/read.php' class=button target='_self'>Refresh</a>";
 
             echo "<tr>";
-            echo "<td>" . $campo["id"]              . "</td>"; 
-            echo "<td>" . $campo["email"]           . "</td>";
-            echo "<td>" . $campo["nome"]            . "</td>";
-            echo "<td>" . $campo["apelido"]         . "</td>"; 
-            echo "<td>" . $campo["status"]          . "</td>"; 
-            echo "<td>" . $campo["codigo"]          . "</td>"; 
-            echo "<td>" . $campo["cod_confirm"]     . "</td>"; 
-            echo "<td>" . $campo["consentimento"]   . "</td>";
-            echo "<td>" . $campo["datareg"]         . "</td>";
-            echo "<td>" . $botao_confirma  . "</td>";
-            echo "<td>" . $botao_checkin. "</td>";
-            echo "<td>" . $botao_cancela . "</td>";
+            echo "<td>"     . $campo["id"]              . "</td>"; 
+            echo "<td><b>"  . $campo["nome"]         . "</b></td>";
+            echo "<td><b>"  . $campo["apelido"]      . "</b></td>"; 
+            echo "<td>"     . $campo["email"]           . "</td>";
+            echo "<td>"     . $campo["status"]          . "</td>"; 
+            echo "<td>"     . $campo["codigo"]          . "</td>"; 
+            echo "<td>"     . $campo["cod_confirm"]     . "</td>"; 
+            echo "<td>"     . $campo["consentimento"]   . "</td>";
+            echo "<td>"     . $campo["datareg"]         . "</td>";
+            echo "<td>"     . $botao_confirma  . "</td>";
+            echo "<td>"     . $botao_cancela . "</td>";
+            echo "<td>"     . $botao_checkin. "</td>";
+
             echo "</tr>";
             
             
-            $cat = "";
+            (empty($campo["categorias"]) ? $cat = "Sem seleção" : $cat = ""  );
             foreach ($campo["categorias"] as $nome_cat) {
                     $cat .= $nome_cat . ",";
             }
-            echo "<tr><td colspan=8 align=right><span class=cat>" . $cat . "</span></td><td colspan=3><td></tr>";
+            echo "<tr><td colspan=9 align=right><span class='cat'>" . $cat . "</span></td><td colspan=3></td></tr>";
             
         } 
         echo "<tr>";
         echo "<td cellspan=12>" . $botao_refresh . "</td>";
         echo "</tr>";
-    echo "</table>";
+        echo "</table>";
 
     }
 

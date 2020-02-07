@@ -5,6 +5,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
        // Envio do email
         
         global $test;
+        global $test_email;
         global $external_url;
         
         // boundary 
@@ -51,7 +52,6 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
                 // prepara o corpo da mensagem em HTML
                 $msg_body  = "<html><head></head><body>";
                 $msg_body .= "<br><p>O seu registo no Summit 1.0 foi confirmado.</p>";
-                $msg_body .= "";
                 $msg_body .= "<p>Se pretender anular esta inscrição, por favor clique o seguinte link: ";
                 $msg_body .= $link . "</p>";
                 $msg_body .= "<p>O \"QR Code\" anexo deve ser apresentado à entrada do evento, constituindo a prova da sua identidade.</p>";
@@ -161,7 +161,7 @@ function envia_email($tipo, $email, $codigo, $cod_confirm)
         $msg = wordwrap($msg,70);
 
         // send email
-        $to = ($test ? "joao.ledo.fonseca@gmail.com" : $email);
+        $to = ( !empty($test_email) ? $test_email : $email);
         
         if (mail($to, "Summit 1.0 - V.N.G.", $msg, $headers)) {
             if ($test) {
