@@ -8,7 +8,7 @@ $test=FALSE ;
 $test_email="joao.ledo.fonseca@gmail.com";
 
 // home page url
-$home_url="http://localhost:81/api/";
+$home_url="/xamp/htdocs/api/";
 $external_url="http://summit.localhost:81/api/";
  
 // page given in URL parameter, default page is one

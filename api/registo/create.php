@@ -1,10 +1,12 @@
 <?php
 // required headers
+/*
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+*/
 
 // get core configurations
 include_once '../config/core.php';
@@ -12,9 +14,10 @@ include_once '../config/core.php';
 include_once '../config/database.php';
 // instantiate registo object
 include_once '../objects/registo.php';
- 
 // email service
 include_once "../shared/email.php";
+// user message service
+include_once "../shared/msg.php";
 
 $database = new Database();
 $db = $database->getConnection();
@@ -65,20 +68,21 @@ if(
             
      
         // set response code - 201 created
-        http_response_code(201);
+        // http_response_code(201);
  
         // tell the user
-        echo json_encode(array("message" => "Registo was created."));
+        message("1","Registo foi criado.");
     }
  
     // if unable to create the registo, tell the user
     else{
  
         // set response code - 503 service unavailable
-        http_response_code(503);
+        // http_response_code(503);
  
         // tell the user
-        echo json_encode(array("message" => "Unable to create registo."));
+        message("1","Impossivel criar registo.");
+        
     }
 }
  
@@ -86,9 +90,28 @@ if(
 else{
  
     // set response code - 400 bad request
-    http_response_code(400);
+    // http_response_code(400);
  
     // tell the user
-    echo json_encode(array("message" => "Unable to create registo. Data is incomplete."));
+    message("1","Impossivel criar registo. Dados incompletos.");
 }
+
+/*
+function message($tipo,$message) {
+    // global $output_msg;
+    // $output_msg=$message;
+    
+    switch ($tipo) {
+        case 1:            
+            echo "<span class=>".$message."</span>";
+            break;
+        case 2:
+            echo json_encode(array("message" => $message));
+            break;
+        default:
+            ;    
+    }
+        
+}  
+*/
 ?>
