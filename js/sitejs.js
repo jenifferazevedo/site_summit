@@ -1,5 +1,6 @@
  /* Click nav */
  let navlink = $('.navbar-nav a');
+ let navbarCollapse = $('.navbar-collapse');
  for (var i = 0; i < navlink.length; i++) {
    navlink[i].addEventListener("click", function () {
      var current = $('.active');
@@ -7,8 +8,6 @@
      this.className += " active";
    });
  }
-
-
 
  /*Botão Ver mais - texto*/
  let botao = document.getElementById("btncollapse");

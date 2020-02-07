@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <!-- Required meta tags -->
@@ -10,12 +10,11 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Hello, world!</title>
+  <title>SUMMIT 1.0</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
 </head>
 
 <body>
-
   <header class="container-fluid sticky-top">
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -29,6 +28,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#oevento">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#noticias">Notícias</a>
             <a class="nav-item nav-link" href="#conferencia">Conferência</a>
             <a class="nav-item nav-link" href="#exposicao">Exposição</a>
             <a class="nav-item nav-link" href="#speedrecruitment">Speed Recruitment</a>
@@ -39,7 +39,7 @@
     </div>
   </header>
   <section id="oevento" class="">
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <div class="row">
         <div class="col-12 bgfoto1">
           <img class="img-fluid" src="./img/header/Mainpage.jpg" alt="Foto que remete a palestras com a logo do evento">
@@ -75,18 +75,112 @@
           </p>
           <button id="btncollapse" type="button" class="btn vermais" data-toggle="collapse" data-target="#sobreevento"
             aria-expanded="false" aria-controls="sobreevento">Ver mais</button>
+            <div id="videoSummit" class="margin0">
+                <div class="video">
+                  <iframe width="760" height="415" src="https://www.youtube.com/embed/T-2x3g71s8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
+      </div>
+    </div>
+  </section> 
+
+  <section id="noticias">
+    <div class="container-fluid cont">
+      <div class="row">
+        <div class="col-12 bgfoto2 ">
+          <img src="./img/header/Noticias.jpg" alt="Foto sobre as Noticias">
+          <h2 class="subtitle">Notícias</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row noticias">
+        <div id="noticiasshow" class="row justify-content-center">
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <a href="./pages/Acreditaportugal.html"> 
+              <div class="card noticias">
+                <div class="cardimg">
+                  <img src="./img/noticias/acreditaportugal.png" alt="Notícias Acredita Portugal!">
+                </div>
+                <div class="cardContent">
+                <h3>Acredita Portugal</h3>
+                <p>Acredita Portugal e Centro de Emprego e Formação Profissional de Vila Nova de Gaia apostam no empreendedorismo.
+                </p>
+                </div>
+              </div>
+              </a> 
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <a href="./pages/altran.html"> 
+              <div class="card noticias">
+                <div class="cardimg">
+                    <img src="./img/noticias/Altran.jpg" alt="Altran no evento SUMMIT 1.0">
+                </div>
+                <div class="cardContent">
+                <h3>Altran no SUMMIT 1.0</h3>
+                <p>Academia IEFP Altran no Centro de Emprego e Formação Profissional de Vila Nova de Gaia.
+                </p>
+                </div>
+              </div>
+              </a> 
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <a href="./pages/Lovemondays.html"> 
+              <div class="card noticias">
+                <div class="cardimg">
+                  <img src="./img/noticias/LoveMondaysClubsmall.jpg" alt="Love Mondays no SUMMIT 1.0">
+                </div>
+                <div class="cardContent">
+                <h3>Love Mondays Club</h3>
+                <p> A Love Mondays Club é uma plataforma de apoio vocacional e de gestão de carreira, através de serviços de mentoria online.
+                </p>
+                </div>
+              </div>
+              </a> 
+            </div>
+            <!--Ultimo card deve ser do nome x-->
+            <div class="cardshow col-lg-4 col-md-5 col-sm-8">
+              <a href="./pages/videojogos.html"> 
+              <div class="card noticias">
+                <div class="cardimg">
+                  <img src="./img/noticias/jogos.jpg" alt="Desenvolvimento de Jogos">
+                </div>
+                <div class="cardContent">
+                <h3>Desenvolvimento de Videojogos</h3>
+                <p>Será possível ver e jogar as diferentes produções desenvolvidas pelos grupos de formação.
+                </p>
+                </div>
+              </div>
+              </a> 
+            </div>
+        </div>
+        <div id="noticias2" class="row collapse justify-content-center">
+          <!--O primeiro card deve ser do mesmo nome do x-->
+          <div class="cardhidden col-lg-4 col-md-5 col-sm-8">
+            <a href="./pages/videojogos.html"> 
+              <div class="card noticias">
+                <div class="cardimg">
+                  <img src="./img/noticias/jogos.jpg" alt="Desenvolvimento de Jogos">
+                </div>
+                <div class="cardContent">
+                <h3>Desenvolvimento de Videojogos</h3>
+                <p> Será possível ver e jogar as diferentes produções desenvolvidas pelos grupos de formação.
+                </p>
+                </div>
+              </div>
+              </a> 
+          </div>
+      </div>
+      <button id="btncollapse2" type="button" class="btn vermais " data-toggle="collapse" data-target="#noticias2"
+      aria-expanded="false" aria-controls="collapseExample">Ver mais</button>
       </div>
     </div>
   </section>
   <section id="conferencia">
-    <div class="container-fluid">
+    <div class="container-fluid cont">
       <div class="row">
         <div class="col-12 bgfoto2 ">
-
-          <!-- align-content-center" style="display: block; align-content: center;
-          style="max-width: 1200px;align-content: center; -->
-
           <img src="./img/header/conferencia.jpg" alt="Foto sobre a Conferência">
           <h2 class="subtitle">Conferência</h2>
         </div>
@@ -95,106 +189,15 @@
     <div class="container">
       <div class="row">
         <div class="col-12 conteudo">
-          <p></p>
+          <h4 style="text-align: center;">Dia 11 e 12 de Fevereiro poderá assistir às conferências que preparamos para si.
+          Veja a seguir a informação sobre os temas,horários e oradores.</h4>
         </div>
       </div>
-
-
       <div>
-
-
         <div class="row oradores">
-         <!-- <div id="carouselOradores" class="row carousel slide" data-ride="carousel" data-pause="hover">
-            <div class="col-1">
-              <a class="control-prev" href="#carouselOradores" role="button" data-slide="prev">
-                <img src="./img/svg/prev.svg" aria-hidden="true">
-                <span class="sr-only">Previous</span>
-              </a>
-            </div>
-            <div class="col-10 carousel-inner">
-              <div class="carousel-item active">
-                <div class="d-flex justify-content-center">
-                  <div class="card orador">
-                    <div class="cardimg">
-                      <img src="./img/oradores/Gisela Oliveira - Blip.png" alt="Oradora do Summit - Blip - Gisele Oliveira">
-                    </div>
-                    <h3>Gisela Oliveira</h3>
-                    <h4>Blip</h4>
-                    <h5>Licenciada em Ciências da Educação e Mestre em Psicologia.
-                      Training&Development, Talent Development e Talent Acqusition.
-                    </h5>
-                  </div>
-                  <div class="card orador">
-                    <div class="cardimg">
-                      <img src="./img/oradores/José Pedro Soares - Financiamento bancario.jpg" alt="Orador do Summit - José Pedro Soares">
-                    </div>
-                    <h3>José Pedro Soares</h3>
-                    <h4>Montepio</h4> Isso é uma empresa?
-                    <h5>Gestor de Clientes Empresas no Departamento Microcrédito com 
-                      foco exclusivo nos projetos de investimentos.</h5>
-                  </div>
-                  <div class="card orador">
-                    <div class="cardimg">
-                      <img class="fotop" src="./img/oradores/sandra_oliveira People _ International Brand - fabmaq.jpg" alt="Oradora do Summit - Sandra Oliveira">
-                    </div>
-                    <h3>Sandra Oliveira</h3>
-                    <h4>FABAMAQ</h4>
-                    <h5>People & International Brand.
-                      <br>
-                      People Partner na empresa Fabamaq.
-                      </h5>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                  <div class="card orador">
-                    <div class="cardimg">
-                      <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Luís Ferreira">
-                    </div>
-                    <h3>Luís Ferreira</h3>
-                    <h4>Birds & Trees</h4>
-                    <h5>Co-founder e CEO na Birds & Trees. MBA com especialização em Marketing. Consultor Especialista em Estratégia.</h5>
-                  </div>
-                  <div class="card orador">
-                    <div class="cardimg">
-                      <img src="./img/oradores/Hugo Matos - ibermagem.jpg" alt="Orador Summit - Hugo Matos">
-                    </div>
-                    <h3>Hugo Matos</h3>
-                    <h4>Ibermagem</h4>
-                    <h5 style="font-size: .8em;">Licenciado em Relações Internacionais (Universidade Lusiada-Porto) e 
-                      Pós-Graduado Marketing (IPAM-Porto) e Pós Graduado Gestão (Universidade Católica)
-                    </h5>
-                  </div>
-                  <div class="card orador">
-                    <div class="cardimg">
-                      <img src="./img/oradores/Manuel Teixeira - fotografo.png" alt="Orador Summit - Manuel Texeira">
-                    </div>
-                    <h3>Manuel Teixeira</h3>
-                    <h4 style="font-size: 1em;">ManuelTeixeiraFotografia</h4>
-                    <h5 style="margin-top: 10px;">Professor de Fotografia no IPF - Instituto Português de Fotografia | Fotógrafo Certificado Phase One
-                    </h5>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-1">
-              <a class="control-next" href="#carouselOradores" role="button" data-slide="next">
-                <img src="./img/svg/next.svg" aria-hidden="true">
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div> -->
-
           <h2 class="headoradores">Conheça os Oradores</h2>
-
-
-          <div id="oradores3" class="row target collapse">
-
+          <div id="oradores3" class="row justify-content-center">
             <div class="col-lg-4 col-md-5 col-sm-8">
-
               <div class="card orador">
                 <div class="cardimg">
                   <img src="./img/oradores/Gisela Oliveira - Blip.png" alt="Oradora do Summit - Blip - Gisele Oliveira">
@@ -209,7 +212,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/José Pedro Soares - Financiamento bancario.jpg" alt="Orador do Summit - José Pedro Soares">
+                  <img src="./img/oradores/José Pedro Soares - Financiamento bancario.jpg" alt="Orador do Summit -Montepio- José Pedro Soares">
                 </div>
                 <h3>José Pedro Soares</h3>
                 <h4>Montepio</h4><!--Isso é uma empresa?-->
@@ -217,10 +220,11 @@
                   foco exclusivo nos projetos de investimentos.</p>
               </div>
             </div>
+
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img class="fotop" src="./img/oradores/sandra_oliveira People _ International Brand - fabmaq.jpg" alt="Oradora do Summit - Sandra Oliveira">
+                  <img class="fotop" src="./img/oradores/sandra_oliveira People _ International Brand - fabmaq.jpg" alt="Oradora do Summit - FABAMAQ - Sandra Oliveira">
                 </div>
                 <h3>Sandra Oliveira</h3>
                 <h4>FABAMAQ</h4>
@@ -230,11 +234,12 @@
                 </p>
               </div>
             </div>
+            
             <!--Ultimo card deve ser do nome x-->
             <div class="cardshow col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Luís Ferreira">
+                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Birds & Trees- Luís Ferreira">
                 </div>
                 <h3>Luís Ferreira</h3>
                 <h4>Birds & Trees</h4>
@@ -242,23 +247,26 @@
               </div>
             </div>
           </div>
+
+
           
-          <div id="todosoradores" class="row target collapse">
+          <div id="todosoradores" class="row collapse justify-content-center">
             <!--O primeiro card deve ser do mesmo nome do x-->
             <div class="cardhidden col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Luís Ferreira">
+                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Birds & Trees- Luís Ferreira">
                 </div>
                 <h3>Luís Ferreira</h3>
                 <h4>Birds & Trees</h4>
                 <p>Co-founder e CEO na Birds & Trees. MBA com especialização em Marketing. Consultor Especialista em Estratégia e em Marketing, Empreendedor, Marketer.</p>
               </div>
             </div>
+            
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Hugo Matos - ibermagem.jpg" alt="Orador Summit - Hugo Matos">
+                  <img src="./img/oradores/Hugo Matos - ibermagem.jpg" alt="Orador Summit - Ibermagem - Hugo Matos">
                 </div>
                 <h3>Hugo Matos</h3>
                 <h4>Ibermagem</h4>
@@ -267,6 +275,7 @@
                 </p>
               </div>
             </div>
+
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
@@ -278,247 +287,369 @@
                 </p>
               </div>
             </div>
+
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Luis caixinhas - Engenheiro de patentes.jpg" alt="Orador Summit - Luís Caixinhas">
+                  <img class="fotop" src="./img/oradores/Luis caixinhas - Engenheiro de patentes.jpg" alt="Orador Summit - Luís Caixinhas">
                 </div>
                 <h3>Luís Caixinhas</h3>
                 <h4>Engenheiro de Patentes</h4>
-                <p>Luís Caixinhas é Mestre em Engenharia de Produção Industrial pela Faculdade de Ciências e Tecnologias da Universidade Nova de Lisboa e Membro da Efetivo da Ordem dos Engenheiros no Colégio de Mecânica</p>
+                <p>Luís Caixinhas é Mestre em Engenharia de Produção Industrial pela F.C.T de Lisboa. e Membro da Efetivo da Ordem dos Engenheiros no Colégio de Mecânica</p>
               </div>
             </div>
 
-<!--           
+
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
+                  <img src="./img/oradores/Gisela Oliveira - Doce segredo.jpg" alt="Oradora Summit - Gisela Oliveira">
                 </div>
-                <h3>Nome Orador</h3>
-                <h4>Empresa</h4>
-                <p>Conteudo/tema , background, eventual formaçao . etc etc etc</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-8">
-              <div class="card orador">
-                <div class="cardimg">
-                </div>
-                <h3>Nome Orador</h3>
-                <h4>Empresa</h4>
-                <p>Conteudo/tema , background, eventual formaçao . etc etc etc</p>
-              </div>
-            </div> -->
-            <!-- <div class="col-lg-4 col-md-5 col-sm-8">
-              <div class="card orador">
-                <div class="cardimg">
-                </div>
-                <h3>Nome Orador</h3>
-                <h4>Empresa</h4>
-                <p>Conteudo/tema , background, eventual formaçao . etc etc etc</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-8"> -->
-              <!-- <div class="card orador">
-                <div class="cardimg">
-                </div>
-                <h3>Nome Orador</h3>
-                <h4>Empresa</h4>
-                <p>Conteudo/tema , background, eventual formaçao . etc etc etc</p>
+                <h3>Gisela Oliveira</h3>
+                <h4>Fundadora Doce Segredo</h4> 
+                <p>Gisela Oliveira, licenciada em Ciências da Nutrição, paixão pela arte dos bolos e dos doces personalizados, abriu uma loja dedicada ao cake design, produtos biológicos e formação</p>
               </div> 
-            </div>-->
+            </div>
+
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <div class="card orador">
+                <div class="cardimg">
+                  <img src="./img/oradores/Ricardo Machado - Diretor Recursos Humanos Altran.jpg" alt="Orador Summit - Ricardo Machado">
+                </div>
+                <h3>Ricardo Machado</h3>
+                <h4>Diretor de Recursos Humanos na Altran.</h4> 
+                <p>Está desde 2006 na Altran, começando como System Architect. Está actualmente na direção de Recursos Humanos.</p>
+              </div> 
+            </div>
+
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <div class="card orador">
+                <div class="cardimg">
+                  <img src="./img/oradores/Virgilio campos - cozinha do sogro.jpg" alt="Orador Summit - Virgílio Campos">
+                </div>
+                <h3>Virgílio Campos</h3>
+                <h4>Fundador "Cozinha do Sogro"</h4> 
+                <p>Depois de trabalhar em diferentes áreas, Virgílio Campos abre em 2019 com o seu sogro o projeto "Cozinha do Sogro".</p>
+              </div> 
+            </div>
+
+
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <div class="card orador">
+                <div class="cardimg ">
+                  <img src="./img/oradores/fernando-fraga.jpg" alt="Orador Summit - Fernando Fraga">
+                </div>
+                <h3>Fernando Fraga</h3>
+                <h4> Empreendedor em série </h4>
+                <p> Começou pela abertura de uma papelaria para pagar as propinas. Desde há 4 anos que faz parte da Acredita Portugal.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-5 col-sm-8">
+              <div class="card orador">
+                <div class="cardimg ">
+                  <img src="./img/oradores/filipe-cordeiro.png" alt="Orador Summit - Filipe Cordeiro">
+                </div>
+                <h3>Filipe Cordeiro</h3>
+                <h4> Graduado em Economia Internacional </h4>
+                <p>Desempenhou várias funções, incluindo consultadoria. Integra a equipa da Acredita Portugal como Diretor de Startups.</p>
+              </div>
+            </div>
+
+                <div class="col-lg-4 col-md-5 col-sm-8">
+                  <div class="card orador">
+                    <div class="cardimg ">
+                      <img class="" src="./img/oradores/raul-ralha.png" alt="Orador Summit - Raul Ralha">
+                    </div>
+                    <h3>Raul Ralha</h3>
+                    <h4> Membro fundador da Associação Grow uP Gaming </h4>
+                    <p> Membro fundador da Associação Grow uP Gaming e tem uma vasta experiência no mundo dos esports
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-5 col-sm-8">
+                  <div class="card orador">
+                    <div class="cardimg">
+                      <img src="./img/oradores/Samuel Soares - Samsys.jpg" alt="Orador SUMMIT - Samuel Soares">
+                    </div>
+                    <h3>Samuel Soares</h3>
+                    <h4>Co-fundador da Samsys</h4>
+                    <p> Engenharia Mecânica no ISEP e realizou uma Pós-Graduação em Direção Comercial e Vendas pelo IPAM, autor do livro “O Caminho do Sonhador”, coautor no livro AMA o Marketing, CEO e co-fundador da Samsys</p>
+                  </div>
+                </div>
           </div>
           <div class="row veroradores">
-            <button id="btncollapse2" type="button" class="btn vermais " data-toggle="collapse" data-target=".target"
+            <button id="btncollapse3" type="button" class="btn vermais " data-toggle="collapse" data-target="#todosoradores"
               aria-expanded="false" aria-controls="collapseExample">Ver mais</button>
           </div>
         </div>
         <div id="cronograma" class="row">
+          <h2>Cronograma</h2>
+          <div class="row horarios">
            
-            <h2>Cronograma</h2>
-             
-            <div class="row horarios">
+            <div id="dia11" class="col-lg-6 col-sm-12">
                
-   
-              <div id="dia11" class="col-lg-6 col-sm-12">
-                 
-  
                 <div class="row cardHorario">
-  
-                  <div class="col-md-3 offset-md-1 col-4">
-                    <div class="horas horasLinha">
-                      <p>9:30</p>
-                    </div>
-                    <div class="horas">
-                      <p>10:00</p>
-                    </div>
-                    <div class="horas">
-                      <p>11:00</p>
-                    </div>
-                      <div class="horas">
-                      <p>11:30</p>
-                    </div>
-                      <div class="horas">
-                      <p>12:00</p>
-                    </div>
-                  </div>
                    
-                  <div class="col-md-8 col-8">
-                    <h3>Dia 11</h3>
-                     
-                    <div class="cardAssunto">
-                      <h4>IT LOGIC </h4>
-                      <h5>Ana Sousa</h5>
-                      <p>O papel da informática na indústria moderna</p>
-                    </div>
-                     
-                      <div class="cardAssunto">
-                          <h4>Wecreateyou</h4>
-                          <h5>Nome do representante da empresa</h5>
-                          <p>A importância da consultoria nas empresas </p>
-                    </div>
-                     
-
-                    <!-- Phaeone sai das 10:30 e passa para 12:00 // 10:30 fica vazio-->
-              
-
-
-
-                    <div class="cardAssunto" >
-                          <h4>Electrofun</h4>
-                          <h5>Ricardo Sousa </h5>
-                          <p>Soluções inteligentes/IOT</p>
-                    </div>
-                     
-                     <div class="cardAssunto">
-                        <h4>Pixel</h4>
-                        <h5>João Silva</h5>
-                        <p>Workshop – Audiovidual (Drone)</p>
-                     </div>
-
-                           
-                  <div class="cardAssunto">
-                    <h4>Phase One</h4>
-                    <h5>Professor de Fotografia no IFP </h5>
-                    <p>Workshop de Fotografia</p>
-                 </div>
-            
-                   
-                     
-                     
-                      <div class="cardAssuntoCinza">
-                          <h4>Moderador</h4>
-                          <h5>Pedro Cabral</h5>
-                    </div>
-                     
-                           
-                     
-                      <!-- <div class="cardAssunto">
-                      <h4>A importância da consultoria nas empresas</h4>
-                      <h6>Wecreateyou</h6>
-                    </div>
-                     
-                     
-                     
-                    <div class="cardAssunto">
-                      <h4>Apresentação Ibermagem</h4>
-                      <h5>Ibermagem - <span>Hugo Matos</span></h5>
-                      <p>27 anos de História, Know-how e Proximidade com Cliente, Destaque no mercado pelas marcas
-                        representadas, Inovação e Qualidade</p>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-               
-               
-               
-               
-               
-              <div id="dia12" class="col-lg-6 col-sm-12">
-                <div class="row cardHorario">
-                  <div class="col-md-3 offset-md-1 col-4">
-                    <div class="horas horasLinha">
-                      <p>09:00</p>
-                    </div>
-                      <div class="horas horasMais25">
-                      <p>10:00</p>
-                    </div>
-                    <div class="horas horasMais50">
-                      <p>14:30</p>
-                    </div>
-                    <div class="horas">
-                      <p>15:00</p>
-                    </div>
-                      <div class="horas horasMais10">
-                      <p>15:30</p>
-                    </div>
-                      <div class="horas ">
-                      <p>16:30</p>
-                    </div>
-                      <div class="horas">
-                      <p>17:00</p>
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-8">
-                    <h3>Dia 12</h3>
-                    <div class="cardAssunto">
-                      <h4>Videojogos</h4>
-                      <h5>Ricardo Mota</h5>
-                      <p>Comunicação nos Videojogos: A importância da comunicação nos videojogos</p>
+                    <div class="col-md-3 offset-md-1 col-4">
+                       
+                        <div class="horas">
+                            <p>9:30</p>
                         </div>
-                    <div class="cardAssunto">
-                        <h4>Ground Control</h4>
-                      <h5>Rui Guedes</h5>
-                      <p>Indústria dos Videojogos: A evolução e os desafios da Indústria dos videojogos</p>
-                      </div>
-                      <div class="cardAssuntoCinza" >
-                          <h4>Moderador</h4>
-                          <h5>Nuno Sá</h5>
-                    </div>
-                 
-                    <div class="cardAssunto">
-                      <h4>Acredita Portugal</h4>
-                      <h5>Fernando Fraga</h5>
-                      <h5>Filipe Cordeiro</h5>
-                      <p>A Acredita Portugal</p>
-                    </div>
-                    <div class="cardAssunto">
-                      <h4>Dois formandos do IEFP</h4>
-                      <h5>Formando do IEFP</h5>
-                      <h5>Formando do IEFP</h5>
-                      <p>Casos práticos de criação do próprio Negócio.</p>
-                    </div>
-                      <div class="cardAssunto">
-                      <h4>Inventa International</h4>
-                      <h5>Nome do representante da empresa</h5>
-                      <p>Propriedade Intelectual</p>
-                    </div>
-                      <div class="cardAssunto">
-                      <h4>Montepio</h4>
-                      <h5>Nome do representante da empresa</h5>
-                      <p>Projeto Montepio – financiamento e microcrédito</p>
-                    </div>
-                      <div class="cardAssunto">
-                      <h4>Birds &amp; Trees</h4>
-                      <h5>Nome do representante da empresa</h5>
-                      <p>Consultoria na área do empreendedorismo</p>
-                    </div>
-                      <div class="cardAssuntoCinza" >
-                          <h4>Moderadora</h4>
-                          <h5>Fernanda Aguiar</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                       
+                        <div class="horas">
+                            <p>10:00</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>10:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>11:00</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>11:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>12:00</p>
+                        </div>
+                       
+                        <div class="horasVazio">
+                            <p><br/></p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>14:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>15:00</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>15:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>16:00</p>
+                        </div>
+                       
+                        <div class="horasVazio">
+                            <p><br/></p>
+                        </div>
+                   
+                    </div><!-- fim da coluna das horas 11-02 -->
+                    <div class="col-md-8 col-8">
+                       
+                        <h3>Dia 11</h3>
+                       
+                        <div class="cardAssunto">
+                            <h4>IT LOGIC</h4>
+                            <h5>Ana Sousa</h5>
+                            <p>O papel da informática na indústria moderna.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>We Create You</h4>
+                            <h5>Orlanda Barbosa</h5>
+                            <p>A importância da consultoria nas empresas.</p>
+                        </div>
+                       
+                        <div class="cardAssuntoCinza">
+                            <h4>Coffee Break</h4>
+                            <p>Pausa para café.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Pixel</h4>
+                            <h5>João Santos</h5>
+                            <p>Demonstração – Audiovisual (Drone).</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Ibermagem</h4>
+                            <h5>Hugo Matos</h5>
+                            <p>A inovação tecnológica na área audiovisual.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Phase One</h4>
+                            <h5>Manuel Teixeira</h5>
+                            <p>Workshop de fotografia de Alta Joalharia com Phase One.</p>
+                        </div>
+                       
+                        <div class="cardAssuntoCinza">
+                            <h4>Moderador</h4>
+                            <h5>Pedro Cabral</h5>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Samsys</h4>
+                            <h5>Samuel Soares</h5>
+                            <p>Hardskills/Softskills – O modelo Samsys.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Altran</h4>
+                            <h5>Ricardo Machado</h5>
+                            <p>Requalificação profissional - Academia Altran.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Blip</h4>
+                            <h5>Gisela Oliveira</h5>
+                            <p>O recrutamento - Dificuldades e Oportunidades.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>FABAMAQ</h4>
+                            <h5>Sandra Oliveira</h5>
+                            <p>A experiência FABAMAQ - Requalificação profissional.</p>
+                        </div>
+                       
+                        <div class="cardAssuntoCinza">
+                            <h4>Moderador</h4>
+                            <h5>Nuno Sá</h5>
+                        </div>
+                       
+                        <!-- <div class="cardAssunto">
+                        <h4>A importância da consultoria nas empresas</h4>
+                        <h6>Wecreateyou</h6>
+                        </div>
+
+                        <div class="cardAssunto">
+                        <h4>Apresentação Ibermagem</h4>
+                        <h5>Ibermagem - <span>Hugo Matos</span></h5>
+                        <p>27 anos de História, Know-how e Proximidade com Cliente, Destaque no mercado pelas marcas
+                        representadas, Inovação e Qualidade</p>
+                        </div> -->
+                   
+                    </div><!-- fim da coluna dos oradores 11-02 -->
+               
+                </div><!-- /.row .cardHorario -->
+           
+            </div><!-- /#dia11 -->
+            <div id="dia12" class="col-lg-6 col-sm-12">
+               
+                <div class="row cardHorario">
+                   
+                    <div class="col-md-3 offset-md-1 col-4">
+                       
+                        <div class="horas">
+                            <p>10:00</p>
+                        </div>
+                       
+                        <div class="horas" style="margin-top: 9rem;">
+                            <p>10:30</p>
+                        </div>
+                       
+                        <div class="horasVazio">
+                            <p><br/></p>
+                        </div>
+                       
+                        <div class="horas" style="margin-top: 7rem;">
+                            <p>14:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>15:00</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>15:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>16:30</p>
+                        </div>
+                       
+                        <div class="horas">
+                            <p>17:00</p>
+                        </div>
+                       
+                        <div class="horasVazio">
+                            <p>?</p>
+                        </div>
+                   
+                    </div><!-- fim da coluna das horas 12-02 -->
+                   
+                    <div class="col-md-8 col-8">
+                       
+                        <h3>Dia 12</h3>
+                       
+                        <div class="cardAssunto">
+                            <h4>Grow uP eSports</h4>
+                            <h5>Raul Ralha</h5>
+                            <p>As oportunidades e dificuldades atuais nos eSports.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Ground Control</h4>
+                            <h5>Rui Guedes</h5>
+                            <p>A evolução e os desafios da Indústria dos Videojogos.</p>
+                        </div>
+                       
+                        <div class="cardAssuntoCinza">
+                            <h4>Moderador</h4>
+                            <h5>Nuno Sá</h5>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Acredita Portugal</h4>
+                            <h5>Fernando Fraga</h5><h5>Filipe Cordeiro</h5>
+                            <p>A Acredita Portugal.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Empreendedores</h4>
+                            <h5>Gisela Oliveira e Virgílio Campos</h5>
+                            <p>Casos práticos de criação do próprio Negócio.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Inventa International</h4>
+                            <h5>Luís Caixinhas</h5>
+                            <p>Propriedade Intelectual.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Montepio</h4>
+                            <h5>José Soares</h5>
+                            <p>Projeto Montepio – financiamento e microcrédito.</p>
+                        </div>
+                       
+                        <div class="cardAssunto">
+                            <h4>Birds &amp; Trees</h4>
+                            <h5>Luís Ferreira</h5>
+                            <p>Consultoria na área do empreendedorismo.</p>
+                        </div>
+                       
+                        <div class="cardAssuntoCinza">
+                            <h4>Moderadora</h4>
+                            <h5>Fernanda Aguiar</h5>
+                        </div>
+                   
+                    </div><!-- fim da coluna dos oradores 12-02 -->
+               
+                </div><!-- /.cardHorario -->
+           
+            </div><!-- /.dia12 -->
+       
+          </div><!-- /.row .horarios -->     
+        </div><!-- /#cronograma /.row -->
+       
+        </div><!-- /#cronograma /.row -->
         <div id="logosempresas">
 
         </div>
       </div>
   </section>
-
   <section id="exposicao">
-    <div class="container-fluid">
+    <div class="container-fluid cont">
       <div class="row">
         <div class="col-12 bgfoto2">
           <img src="./img/header/exposicao.jpg" alt="Foto sobre a Conferência">
@@ -529,90 +660,105 @@
 
     <div class="container">
       
-      <div class="row">
+      <div class="row margin0">
         <div class="col-12 conteudo">
-          <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail
-            heave to reef sails maroon log list six pounders </p>
+          <h4 style="text-align: center;">Onde poderá conhecer e experienciar o contacto com áreas ligadas à tecnologia e inovação. </h4>
         </div>
       </div>
       
       <div class="exposicao_mapa">
-          <h2 class="headstands">Salas de Exposição</h2>
-        
-        <div class="exposicao_stand">
-               <!--1o lado-->
-            <div class="stand-1 stand">
-              <i class="fas fa-cubes"></i>  ANIMAÇÃO 2D & 3D
-            </div>
-            <div class="stand-2 stand">
-              <i class="fas fa-print"></i> IMPRESSÃO 3D
-            </div>
-            <div class="stand-3 stand">
-              <i class="fas fa-laptop-medical"></i> REPARAÇÃO DE HARDWARE
-            </div>
-            <div class="stand-4 stand">
-              </i>FRONT END DEVELOPER - 
-                MKT - DESIGN
-            </div>
-            <div class="stand-5 stand">
-                LOVE MONDAYS 
-                CV’S CRIATIVOS
-            </div>
-            <div class="stand-6 stand">
-              <i class="fas fa-restroom"></i> &nbsp;&nbsp; 
-              WC
-                
-            </div>
-            <div class="stand-7 stand">
-              <i class="fas fa-sign-out-alt"></i> ENTRADA
+        <h2 class="headstands">Salas de Exposição</h2>
+      
+      <div class="exposicao_stand">
+             <!--1o lado-->
+
+          <div class="stand-1 stand pop" data-toggle="popover" title="ANIMAÇÃO 2D & 3D" data-content="Modelação Projetos de animação" >
+            <i class="fas fa-cubes"></i>  ANIMAÇÃO 2D & 3D
+          </div>
+
+          <div class="stand-2 stand pop" data-toggle="popover" title="VIDEOJOGOS" data-content="Desenvolvimento de videojogos;
+          Experiências com Jogos 2D & 3D
+          Jogos PS4
+          Arcade
+          ">
+            <i class="fas fa-gamepad"></i>
+            VIDEOJOGOS      
+          </div>
+
+          <div class="stand-3 stand pop" data-toggle="popover" title="IMPRESSÃO 3D" data-content="Experiência com impressoras 3D – preparação e impressão">
+            <i class="fas fa-print"></i> IMPRESSÃO 3D
+
+          </div>
+
+          <div class="stand-4 stand pop" data-toggle="popover" title="AUDIOVISUAL" data-content="Experiência de captura de imagem em studio e edição de fotografia/vídeo">
+            <i class="fas fa-video"></i>  AUDIOVISUAL          
+          </div>
+
+          <div class="stand-5 stand pop" data-toggle="popover" title="REPARAÇÃO DE HARDWARE" data-content="Reparação de hardware em contexto real">
+            <i class="fas fa-laptop-medical"></i> REPARAÇÃO DE HARDWARE 
+          </div>
+
+          <div class="stand-6 stand pop"data-toggle="popover" title="ARDUINO" data-content="Programação em Arduino Demonstrações de domótica e robótica">
+            ARDUINO   
+          </div>
+
+          <div class="stand-7 stand pop"data-toggle="popover" title="FRONT / BACK END DEVELOPER " data-content="Desenvolvimento de website(programação e design)" >
+            </i>FRONT END DEVELOPER - 
+            MKT - DESIGN
+          </div>
+
+            <!--2o lado-->
+
+          <div class="stand-8 stand pop" data-toggle="popover" title="PROGRAMAÇAO MOBILE" data-content="Aplicações para Android desenvolvidas ">
+            <i class="fas fa-mobile-alt"></i>  PROGRAMAÇÃO MOBILE 
             </div>
 
-              <!--2o lado-->
+          <div class="stand-9 stand pop" data-toggle="popover" title="LOVE MONDAYS" data-content="Apoio na realização de Currículos criativos utilizando a ferramenta Canva">
+            LOVE MONDAYS 
+            CV’S CRIATIVOS
+          </div>
 
-            <div class="stand-8 stand" data-toggle="popover" title="VIDEOJOGOS" data-content="Some content inside the popover">
+          <div class="stand-10 stand pop"data-toggle="popover" title="ALTRAN" data-content="Desenvolvimento de produtos e soluções tecnológicas inovadoras">
+            ALTRAN
+          </div>
+
+          <div class="stand-11 stand">
+            <i class="fas fa-sign-out-alt"></i> ENTRADA
+          </div>
+
+          <div class="stand-12 stand pop"data-toggle="popover" title="GOTYKAGE - FABAMAQ" data-content="Marketing Digital - Desenvolvimento de jogos de casino">
+              GOTYKAGE - FABAMAQ
+          </div>
+
+          <div class="stand-13 stand">
+              <i class="fas fa-restroom"></i> &nbsp;&nbsp;  WC
+          </div>
+
+          <div class="stand-14 stand">
+            <i class="fas fa-coffee"></i>  COFFEE BREAK
+          </div>
+
+               <!--SPEED RECRUITMENT-->
           
-              <i class="fas fa-gamepad"></i>
-             VIDEOJOGOS            
-              </div>
-            <div class="stand-9 stand">
-              <i class="fas fa-video"></i>  AUDIOVISUAL          
-            </div>
-            <div class="stand-10 stand">
-                ARDUINO            
-            </div>
-            <div class="stand-11 stand">
-              <i class="fas fa-mobile-alt"></i>  PROGRAMAÇÃO MOBILE    
-            </div>
-            <div class="stand-12 stand">
-                ALTRAN
-            </div>
-            <div class="stand-13 stand">
-                GOTYKAGE
-            </div>
-            <div class="stand-14 stand">
-              <i class="fas fa-coffee"></i>  COFFEE BREAK
-            </div>
-                 <!--SPEED RECRUITMENT-->
-            
-          
-        </div>
-        <!-- <img src="./img/exposicao_mapa.png" alt="Mapa da Exposição do evento"> -->
         
-        <div class="row justify-content-center mt-3">
-        <div class="speed_mapa col-8">
-            <div class="col-12 speed">
-              <i class="fas fa-comments"></i> SPEED RECRUITMENT        
-            </div>
+      </div>
+      <!-- <img src="./img/exposicao_mapa.png" alt="Mapa da Exposição do evento"> -->
+      
+      <div class="row justify-content-center mt-3">
+      <div class="speed_mapa col-8">
+          <div class="col-12 speed">
+            <i class="fas fa-comments"></i> SPEED RECRUITMENT        
           </div>
         </div>
-      
-       
-      </div> 
+      </div>
+    
+     
+    </div> 
 
     </div>
   </section>
   <section id="speedrecruitment">
-    <div class="container-fluid">
+    <div class="container-fluid cont">
       <div class="row">
         <div class="col-12 bgfoto2">
           <img src="./img/header/speedrecruitment.jpg" alt="Foto sobre o Speed Recruitment">
@@ -625,13 +771,8 @@
         <div class="col-12 conteudo">
           <h3>Venha preparado/a..</h3>
           <br>
-          <h6>Traga o seu curriculum vitae e faça uma candidatura espontânea junto de algumas empresas da área
-            tecnológica.</h6>
-          <!--<h3>Perguntas frequentes</h3>
-            <br>
-            <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail heave to reef sails maroon log list six pounders </p>
-            <p>Dance the hempen jig splice the main brace fire in the hole pink ballast walk the plank Plate Fleet topsail</p>
-            <br>-->
+          <h6>O Speed Recruitment vai decorrer no dia 11 de fevereiro, traga o seu curriculum vitae e faça uma candidatura espontânea junto de algumas empresas da área
+          tecnológica.</h6>
           <br>
         </div>
       </div>
@@ -665,44 +806,13 @@
                 </div>
               </div>
             </div>
-            <!--
-              <div class="card">
-                <div class="card-header faq" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <h5 class="mb-0">
-                    <div class="titulo_pergunta">
-                      <p>Pergunta sobre o speed recruitment?</p>
-                      <img src="./img/svg/downArrow.svg" alt="Click e veja a resposta">
-                    </div>
-                  </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header faq" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <h5 class="mb-0">
-                    <div class="titulo_pergunta">
-                      <p>Pergunta sobre o speed recruitment?</p>
-                      <img src="./img/svg/downArrow.svg" alt="Click e veja a resposta">
-                    </div>
-                  </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>-->
           </div>
         </div>
       </div>
     </div>
   </section>
   <section id="preInscricao">
-    <div class="container-fluid">
+    <div class="container-fluid cont">
       <div class="row">
         <div class="col-12 bgfoto2">
           <img src="./img/header/register.jpg" alt="Foto sobre a Pré Inscrição">
@@ -718,10 +828,9 @@
       </div>
       <div class="row margin0">
         <div class="col-md-4 col-sm-12 textoForm">
-          <p class="descricao_formulario">Sint ut quaerat qui molestiae inventore excepturi dolor.
-            Aperiam iusto consequatur occaecati autem id consectetur voluptatem. Maiores quam sit eos. Doloremque
-            quaerat quia inventore dolores nemo deleniti id ut. Omnis sit in fugiat. Dolor enim cum ex ut eum at aut
-            rerum.</p>
+        <p class="descricao_formulario">Faça o pré-registo para assistir às conferências do dia 11 e 12 de fevereiro – VAGAS LIMITADAS
+            Vai receber um email de confirmação da sua inscrição com um QR Code que deve apresentar no dia do evento para validação da entrada.<br><br>
+            Duvídas e informações:<br><a style="color: blue;" href="mailto:sfgaiasummit@gmail.com" target="_blank">sfgaiasummit@gmail.com</a><br></p>
         </div>
         <div class="col-md-8 col-sm-12">
                                    
@@ -735,7 +844,6 @@
               </div>
             </div>
             <div class="form-row">
-              <!--DUVIDA: colocar type email? Resposta: Sim!-->
               <div class="form-group col">
                 <input type="email" class="form-control" name="email" id="email" value="" required placeholder="@E-mail">
                 <div class="invalid-feedback">
@@ -744,7 +852,6 @@
               </div>
             </div>
             <div class="form-row">
-              <!--DUVIDA: colocar "pattern="^\d{3}\d{3}\d{3}$" como condição para número válido" Resposta: SIM!!! -->
               <div class="form-group col">
                 <input type="text" class="form-control" name="telefone" id="telefone" value="" required placeholder="Telefone/Telemóvel">
                 <div class="invalid-feedback">
@@ -756,13 +863,6 @@
               <div class="form-group col">
                 <select class="custom-select" name="categoria[]" id="categoria" multiple="multiple" required>
                   <option selected disabled value="">Escolhe a tua area de interesse </option>
-                  <!--
-                  <option>1...</option>
-                  <option>2...</option>
-                  <option>3...</option>
-                  <option>4...</option>
-                  <option>5...</option>
-                    -->
                     <?php 
                         include_once './api/config/database.php';
                         $db = New Database();
@@ -794,7 +894,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" value="1" name="consentimento" id="invalidCheck" required>
                   <label class="form-check-label" for="invalidCheck">
-                    Li e aceito o Regulamento Geral de Proteção de Dados (RGPD)
+                    Li e aceito o Regulamento Geral de Proteção de Dados <a href="https://iefponline.iefp.pt/IEFP/navegacao/privacidade2.jsp" style="color: blue;">(RGPD)</a>
                   </label>
                   <div class="invalid-feedback">
                     Deve aceitar o Regulamento Geral de Proteção de Dados (RGPD).
@@ -807,7 +907,7 @@
             </div>
           </form>
       
-          <iframe src="" frameborder="0" name="registo_msg" style="height:100px; width:680px;">
+          <iframe class="margin0" style="width: 100%;" src="" frameborder="0" name="registo_msg" style="height:100px; width:680px;">
                 
           </iframe>
 
@@ -823,15 +923,17 @@
   </section>
   <section id="footer" class="pgfinal">
     <div class="container-fluid">
+
       <div class="row">
         <div id="mapaDoSite" class="col-md-3 col-sm-6 col-6">
           <h5>Mapa do site</h5>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Conferência</a></li>
-            <li><a href="#">Exposição</a></li>
-            <li><a href="#">Speed Recruitment</a></li>
-            <li><a href="#">Pré-inscrição</a></li>
+            <li><a href="#oevento">Home</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#conferencia">Conferência</a></li>
+            <li><a href="#exposicao">Exposição</a></li>
+            <li><a href="#speedrecruitment">Speed Recruitment</a></li>
+            <li><a href="#preInscricao">Pré-inscrição</a></li>
           </ul>
         </div>
         <div id="info" class="col-md-4 col-sm-6 col-6">
@@ -839,29 +941,31 @@
           <p>Rua Valente Perfeito, 322<br>
             VILA NOVA DE GAIA<br>
             4400-330 Santa Marinha<br>
-            +351 22 0000000</p>
+            +351 22 0989540</p>
         </div>
-        <div id="turma" class="col-md-3 col-sm-6 col-12">
-          <h5>Evento e site desenvolvidos pela turma de Front end</h5>
-          <a href="" target="_blank">Veja nossa equipa!</a>
+
+        <div id="redesSociais" class="col-md-2 col-sm-6 col-4">
+            <h5>Rede Social</h5>
+          <a href="https://m.facebook.com/events/812408069181947"><img src="./img/svg/footer/facebookFooter.svg" alt="Facebook do evento" style="max-width: 50px"></a>
         </div>
-        <div id="redesSociais" class="col-md-2 col-sm-6 col-12">
-          <a href="https://m.facebook.com/events/812408069181947"><img src="./img/svg/footer/facebookFooter.svg" alt="Facebook do evento"></a>
-        </div>
+
+
       </div>
-      <div id="logosFooter" class="row">
-        <div class="col-lg-12">
-          <img src="./img/svg/footer/footer1.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer2.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer3.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer4.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer5.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer6.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer7.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer8.svg" alt="Logo nome">
-          <img src="./img/svg/footer/footer9.svg" alt="Logo nome">
-        </div>
-      </div>
+<hr style="border-color: white"; >
+
+<div id="logosFooter" class="row">
+  <div class="col-lg-12">
+    <a href="http://www.pofc.qren.pt/" target="_blank" ><img src="./img/svg/footer/footer1.svg" alt="COMPETE"></a>
+    <a href="https://europa.eu/" target="_blank"><img class="logop" src="./img/svg/footer/footer2.svg" alt="Uniaao Europeia"></a>
+    <a href="https://ec.europa.eu/eures/public/pt/homepage" target="_blank"><img class="logop" src="./img/svg/footer/footer3.svg" alt="EURES"></a>
+    <a href="https://www.portugal.gov.pt/"target="_blank"><img src="./img/svg/footer/footer4.svg" alt="República Portuguesa"></a>
+    <a href="https://eportugal.gov.pt/"target="_blank"><img src="./img/svg/footer/footer5.svg" alt="E-Portugal"></a>
+    <a href="https://worldskillsportugal.iefp.pt/"target="_blank"><img src="./img/svg/footer/footer6.svg" alt="World Skills"></a>
+    <a href="https://www.portugal2020.pt/"target="_blank"><img src="./img/svg/footer/footer7.svg" alt="Portugal 2020"></a>
+    <a href="https://www.garantiajovem.pt/"target="_blank"><img src="./img/svg/footer/footer8.svg" alt="Garantia Jovem"></a>
+    <a href="http://www.qren.pt/np4/home"target="_blank"><img src="./img/svg/footer/footer9.svg" alt="QREN"></a>
+  </div>
+</div>
     </div>
   </section>
 
@@ -912,123 +1016,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-    
-  <script>
-    /* Click nav */
-    let navlink = $('.navbar-nav a');
-    for (var i = 0; i < navlink.length; i++) {
-      navlink[i].addEventListener("click", function () {
-        var current = $('.active');
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-
-
-
-    /*Botão Ver mais - texto*/
-    let botao = document.getElementById("btncollapse");
-    $('#sobreevento').on('show.bs.collapse', function () {
-      botao.innerHTML = "Ver menos"
-    });
-    $('#sobreevento').on('hide.bs.collapse', function () {
-      botao.innerHTML = "Ver mais"
-    });
-
-    /*Botão Ver mais Carousel e Cards oradores*/
-     let botao2 = document.getElementById("btncollapse2");
-   //let carouselOradores = document.getElementById("carouselOradores");
-    let oradores3 = document.getElementById("oradores3");
-    let todosoradores = document.getElementById("todosoradores");
-
-    let cardshow = document.getElementsByClassName("cardshow");
-    function oradoresBreak(media) {
-      if (media.matches) {
-        
-        oradores3.style.display = "flex";
-        oradores3.classList.add("justify-content-center");
-        todosoradores.classList.add("justify-content-center")
-
-        $('#todosoradores').on('show.bs.collapse', function () {
-          botao2.innerHTML = "Ver menos"
-          //carouselOradores.style.display = "none";
-          oradores3.style.display = "flex";
-        });
-        $('#todosoradores').on('hide.bs.collapse', function () {
-          botao2.innerHTML = "Ver mais"
-          //carouselOradores.style.display = "none";
-          oradores3.style.display = "flex";
-        });
-      } else {
-        //carouselOradores.style.display = "flex";
-        //oradores3.style.display = "none";
-        oradores3.style.display = "flex";
-        todosoradores.style.display = "none";
-
-        $('#todosoradores').on('show.bs.collapse', function () {
-          botao2.innerHTML = "Ver menos"
-          //carouselOradores.style.display = "none";
-          oradores3.style.display = "flex";
-          todosoradores.style.display = "flex";
-        });
-        $('#todosoradores').on('hide.bs.collapse', function () {
-          botao2.innerHTML = "Ver mais"
-          //carouselOradores.style.display = "flex";
-          oradores3.style.display = "flex";
-          todosoradores.style.display = "none"
-        });
-      }
-    }
-    let breakpoint1 = window.matchMedia("(max-width: 991.98px)");
-    oradoresBreak(breakpoint1)
-    breakpoint1.addListener(oradoresBreak);
-
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-            //event.preventDefault();
-          }, false);
-        });
-      }, false);
-    })();
- 
-    /* Contador */
-    var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
-    var x = setInterval(function () {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("dias").innerHTML = days;
-      document.getElementById("horas").innerHTML = hours;
-      document.getElementById("minutos").innerHTML = minutes;
-      document.getElementById("segundos").innerHTML = seconds;
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("resultado").innerHTML = "O evento começou!";
-      }
-    }, 1000);
-
-    $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-    });
-
-
-   
-  </script>
+  <script src="./js/sitejs.js"></script>
 </body>
-
 </html>

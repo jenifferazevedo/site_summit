@@ -124,15 +124,15 @@
       </div>
       <div id="logosFooter" class="row">
         <div class="col-lg-12">
-          <a href="http://www.pofc.qren.pt/" target="_blank" ><img src="../img/svg/footer/footer1.svg" alt="COMPETE"></a>
-          <a href="https://europa.eu/" target="_blank"><img src="../img/svg/footer/footer2.svg" alt="Uniaao Europeia"></a>
-          <a href="https://ec.europa.eu/eures/public/pt/homepage" target="_blank"><img src="../img/svg/footer/footer3.svg" alt="EURES"></a>
-          <a href="https://www.portugal.gov.pt/"target="_blank"><img src="../img/svg/footer/footer4.svg" alt="República Portuguesa"></a>
-          <a href="https://eportugal.gov.pt/"target="_blank"><img src="../img/svg/footer/footer5.svg" alt="E-Portugal"></a>
-          <a href="https://worldskillsportugal.iefp.pt/"target="_blank"><img src="../img/svg/footer/footer6.svg" alt="World Skills"></a>
-          <a href="https://www.portugal2020.pt/"target="_blank"><img src="../img/svg/footer/footer7.svg" alt="Portugal 2020"></a>
-          <a href="https://www.garantiajovem.pt/"target="_blank"><img src="../img/svg/footer/footer8.svg" alt="Garantia Jovem"></a>
-          <a href="http://www.qren.pt/np4/home"target="_blank"><img src="../img/svg/footer/footer9.svg" alt="QREN"></a>
+              <a href="http://www.pofc.qren.pt/" target="_blank" ><img src="../img/svg/footer/footer1.svg" alt="COMPETE"></a>
+              <a href="https://europa.eu/" target="_blank"><img class="logop" src="../img/svg/footer/footer2.svg" alt="Uniaao Europeia"></a>
+              <a href="https://ec.europa.eu/eures/public/pt/homepage" target="_blank"><img class="logop" src="../img/svg/footer/footer3.svg" alt="EURES"></a>
+              <a href="https://www.portugal.gov.pt/"target="_blank"><img src="../img/svg/footer/footer4.svg" alt="República Portuguesa"></a>
+              <a href="https://eportugal.gov.pt/"target="_blank"><img src="../img/svg/footer/footer5.svg" alt="E-Portugal"></a>
+              <a href="https://worldskillsportugal.iefp.pt/"target="_blank"><img src="../img/svg/footer/footer6.svg" alt="World Skills"></a>
+              <a href="https://www.portugal2020.pt/"target="_blank"><img src="../img/svg/footer/footer7.svg" alt="Portugal 2020"></a>
+              <a href="https://www.garantiajovem.pt/"target="_blank"><img src="../img/svg/footer/footer8.svg" alt="Garantia Jovem"></a>
+              <a href="http://www.qren.pt/np4/home"target="_blank"><img src="../img/svg/footer/footer9.svg" alt="QREN"></a>
         </div>
       </div>
     </div>
@@ -185,122 +185,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script>
-    /* Click nav */
-    let navlink = $('.navbar-nav a');
-    for (var i = 0; i < navlink.length; i++) {
-      navlink[i].addEventListener("click", function () {
-        var current = $('.active');
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-
-
-
-    /*Botão Ver mais - texto*/
-    let botao = document.getElementById("btncollapse");
-    $('#sobreevento').on('show.bs.collapse', function () {
-      botao.innerHTML = "Ver menos"
-    });
-    $('#sobreevento').on('hide.bs.collapse', function () {
-      botao.innerHTML = "Ver mais"
-    });
-
-    /*Botão Ver mais Carousel e Cards oradores*/
-     let botao2 = document.getElementById("btncollapse2");
-   //let carouselOradores = document.getElementById("carouselOradores");
-    let oradores3 = document.getElementById("oradores3");
-    let todosoradores = document.getElementById("todosoradores");
-
-    let cardshow = document.getElementsByClassName("cardshow");
-    function oradoresBreak(media) {
-      if (media.matches) {
-        
-        oradores3.style.display = "flex";
-        oradores3.classList.add("justify-content-center");
-        todosoradores.classList.add("justify-content-center")
-
-        $('#todosoradores').on('show.bs.collapse', function () {
-          botao2.innerHTML = "Ver menos"
-          //carouselOradores.style.display = "none";
-          oradores3.style.display = "flex";
-        });
-        $('#todosoradores').on('hide.bs.collapse', function () {
-          botao2.innerHTML = "Ver mais"
-          //carouselOradores.style.display = "none";
-          oradores3.style.display = "flex";
-        });
-      } else {
-        //carouselOradores.style.display = "flex";
-        //oradores3.style.display = "none";
-        oradores3.style.display = "flex";
-        todosoradores.style.display = "none";
-
-        $('#todosoradores').on('show.bs.collapse', function () {
-          botao2.innerHTML = "Ver menos"
-          //carouselOradores.style.display = "none";
-          oradores3.style.display = "flex";
-          todosoradores.style.display = "flex";
-        });
-        $('#todosoradores').on('hide.bs.collapse', function () {
-          botao2.innerHTML = "Ver mais"
-          //carouselOradores.style.display = "flex";
-          oradores3.style.display = "flex";
-          todosoradores.style.display = "none"
-        });
-      }
-    }
-    let breakpoint1 = window.matchMedia("(max-width: 991.98px)");
-    oradoresBreak(breakpoint1)
-    breakpoint1.addListener(oradoresBreak);
-
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-            event.preventDefault();
-          }, false);
-        });
-      }, false);
-    })();
- 
-    /* Contador */
-    var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
-    var x = setInterval(function () {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("dias").innerHTML = days;
-      document.getElementById("horas").innerHTML = hours;
-      document.getElementById("minutos").innerHTML = minutes;
-      document.getElementById("segundos").innerHTML = seconds;
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("resultado").innerHTML = "O evento começou!";
-      }
-    }, 1000);
-
-    $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-    });
-
-
-   
-  </script>
+    <script src="../js/sitejs.js"></script>
 </body>
 
 </html>
