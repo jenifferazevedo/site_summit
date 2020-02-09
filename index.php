@@ -5,15 +5,6 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Summit 1.0, evento de tecnologia e inovação do Serviço de Formação de Vila Nova de Gaia – Porto, com participação de recrutadores e empresas da área.">
-  <meta name="keywords" content="tecnologia, summit, iefp, inovação, carreira">
-  <meta name="robots" content="index,follow">
-  <meta http-equiv="content-language" content="pt-br">
-  <meta name="reply-to" content="frontendeveloper1@gmail.com">
-  <meta property="og:title" content="SUMMIT 1.0 - SERVIÇO DE FORMAÇÃO VILA NOVA DE GAIA">
-  <meta property="og:image" content="./">
-
-
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -60,12 +51,14 @@
       <div class="row">
         <div class="col-12">
           <h1 class="titulo">SUMMIT 1.0</h1>
-          <p id="eventoTitle">
+          <p>
+        
             Dia 11 e 12 de fevereiro de 2020 realiza-se a primeira edição do Summit 1.0 – Serviço
             de Formação de Vila Nova de Gaia.
             <br><br>
             O evento foi pensado para satisfazer a necessidade de conhecer melhor o mundo da inovação tecnológica, pela
             perspetiva de recrutadores e empresas dessas áreas.
+           
           </p>
             <p id="sobreevento" class="collapse">
 
