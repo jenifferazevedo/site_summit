@@ -1,25 +1,25 @@
- /* Contador */
- var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
- var x = setInterval(function () {
-   var now = new Date().getTime();
-   var distance = countDownDate - now;
-   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-   document.getElementById("dias").innerHTML = days;
-   document.getElementById("horas").innerHTML = hours;
-   document.getElementById("minutos").innerHTML = minutes;
-   document.getElementById("segundos").innerHTML = seconds;
-   if (distance < 0) {
-     clearInterval(x);
-     document.getElementById("resultado").innerHTML = "O evento começou!";
-   }
- }, 1000);
+/* Contador */
+var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
+var x = setInterval(function () {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("dias").innerHTML = days;
+  document.getElementById("horas").innerHTML = hours;
+  document.getElementById("minutos").innerHTML = minutes;
+  document.getElementById("segundos").innerHTML = seconds;
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("resultado").innerHTML = "O evento começou!";
+  }
+}, 1000);
 
- $(document).ready(function(){
- $('[data-toggle="popover"]').popover();   
- });
+$(document).ready(function(){
+$('[data-toggle="popover"]').popover();   
+});
 
 /* Click nav */
  let navlink = $('.navbar-nav a');
@@ -31,43 +31,37 @@
    });
  }
 
-$('.navbar-nav>a').on('click', function(){
+/* $('.navbar-nav>a').on('click', function(){
   $('.navbar-collapse').collapse('hide');
-});
+});*/
 
  /*Botão Ver mais - texto*/
  let botao = document.getElementById("btncollapse");
- let eventoTop = document.getElementById('eventoTitle').offsetTop;
  $('#sobreevento').on('show.bs.collapse', function () {
    botao.innerHTML = "Ver menos"
  });
  $('#sobreevento').on('hide.bs.collapse', function () {
-   botao.innerHTML = "Ver mais";
-   scrollTo({top: eventoTop + 100, left: 0, behavior: 'smooth'});
+   botao.innerHTML = "Ver mais"
  });
 
  /*Botão Ver mais - Noticias */
  let botao2 = document.getElementById("btncollapse2");
- let noticiasTop = document.getElementById('noticiasshow').offsetTop;
  $('#noticias2').on('show.bs.collapse', function () {
    botao2.innerHTML = "Ver menos"
  });
 
  $('#noticias2').on('hide.bs.collapse', function () {
-   botao2.innerHTML = "Ver mais";
-   scrollTo({top: noticiasTop, left: 0, behavior: 'smooth'});
+   botao2.innerHTML = "Ver mais"
  });
 
  /*Botão Ver mais - Oradores */
  let botao3 = document.getElementById("btncollapse3");
- let oradoresTop = document.getElementById('oradores3').offsetTop;
  $('#todosoradores').on('show.bs.collapse', function () {
    botao3.innerHTML = "Ver menos"
  });
  $('#todosoradores').on('hide.bs.collapse', function () {
-   botao3.innerHTML = "Ver mais";
-   scrollTo({top: oradoresTop, left: 0, behavior: 'smooth'});
-  });
+   botao3.innerHTML = "Ver mais"
+ });
 
 
  // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -90,3 +84,4 @@ $('.navbar-nav>a').on('click', function(){
    }, false);
  })();
 
+ 
