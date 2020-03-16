@@ -1,6 +1,7 @@
  /* Contador */
  var countDownDate = new Date("Feb 11, 2020 09:00:00").getTime();
  var x = setInterval(function () {
+   let result =  document.getElementById("countTime");
    var now = new Date().getTime();
    var distance = countDownDate - now;
    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -11,9 +12,8 @@
    document.getElementById("horas").innerHTML = hours;
    document.getElementById("minutos").innerHTML = minutes;
    document.getElementById("segundos").innerHTML = seconds;
-   if (distance < 0) {
-     clearInterval(x);
-     document.getElementById("resultado").innerHTML = "O evento começou!";
+   if (distance <= 0) {
+     result.innerHTML = '<p>Obrigada por participar do evento!</p>';
    }
  }, 1000);
 
