@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-pt">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
                 </div>
 
                 <!-- grupo com último nome -->
-                <div class="form-group col-md-6"> 
+                <div class="form-group col-md-6">   
                     <input type="text" class="form-control" name="apelido" id="apelido" value="" required placeholder="Apelido" maxlength="30">
                 </div>
 

@@ -1,3 +1,5 @@
+/*04/02/2020 - 11:38 */
+
 /*Tags gerais*/
 a, li {
     color: black;
@@ -110,6 +112,7 @@ button.chamada {
     flex-direction: row;
     justify-content: center;
 } /* classe criada por Jeni */
+
 .bgfoto1 img:nth-child(1) {
     width: 100%;
     min-width: 800px;
@@ -125,7 +128,7 @@ button.chamada {
 }  
 /* Classe do background inicial dos subtitulos */
 .bgfoto2 {
-    width: 100%;
+    width: 80%;
     max-height: 300px;
     min-height: 140px;
     padding: 0;
@@ -135,7 +138,13 @@ button.chamada {
     width: 100%;
     min-width: 700px;
 }
-
+#videoSummit {
+    width: 100%;
+    display: flex;
+}
+#videoSummit .video {
+    margin: 10px auto 5px auto;
+}
 .titulo {
     font-weight: bold;
 }  /* classe criada por Jeni */
@@ -166,6 +175,62 @@ button.chamada {
     border: 1px solid #5CB85C;
 }
 
+/*NOTICIAS*/
+#noticias {
+    margin-top: 70px;
+}
+#noticias a {
+    width: 100%;
+}
+#noticiasshow {
+    padding: 2rem 2.5% 0 2.5%;
+    margin: 0;
+    width: 100%;
+}
+#noticias2 {
+    padding: 0 2.5% 0 2.5%;
+    margin: 0;
+    width: 100%;
+}
+.noticias {
+    margin-top: 40px;
+    background-color: rgba(196, 196, 196, .1);
+}
+.card.noticias {
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    text-align: left;
+    padding: 20px 15px 10px 15px; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.card.noticias .cardimg {
+    width: 90%;
+    height: 180px;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+    display: block;
+}
+.card.noticias .cardimg img {
+    height: 100%;
+}
+.card.noticias .cardContent{
+    padding: 0 15px;
+}
+.card.noticias p {
+    padding-top: 10px;
+}
+
+
 /*CONFERENCIA*/
 #conferencia {
     margin-top: 70px;
@@ -176,6 +241,9 @@ button.chamada {
 .oradores {
     background-color: rgba(196, 196, 196, .1);
 }
+
+
+
 .card.orador {
     width: 100%;
     text-align: center;
@@ -187,7 +255,28 @@ button.chamada {
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    min-height: 400px;
+    overflow: hidden;
 }
+
+/*
+.card.orador {
+    width: 100%;
+    text-align: center;
+    padding: 20px 15px 10px 15px; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    min-height: 450px;
+  
+    overflow: hidden;
+}
+*/
+
 .card.orador h4, .card h4 {
     margin: 0;
 }
@@ -258,9 +347,11 @@ button.chamada {
 #cronograma {
     margin-top: 30px;
 }
+
 #cronograma h2 {
     margin: 0 auto;
 }
+
 #cronograma h3 {
     font-size: 1.7em;
     padding: .5rem .8rem;
@@ -269,11 +360,13 @@ button.chamada {
     color: white;
     margin: 2rem 20% 0 20%;
 }
+
 .horarios {
     background-color: rgba(196, 196, 196, .1);
     padding: 0 2.5% 25px 2.5%;
     margin: 20px 0;
 }
+
 .horas {
     width: 100%;
     background-color: #5199DB;
@@ -283,9 +376,22 @@ button.chamada {
     text-align: center;
     color: white;
 }
+
 .horas:nth-child(1) {
     margin-top: 10rem;
 }
+
+.horasVazio {
+    width: 100%;
+    background-color: none;
+    font-size: 1.7em;
+    font-weight: bolder;
+    margin-top: 8rem;
+    text-align: center;
+    color: white;
+}
+/*
+removido a pedido da Nídia
 .horas.horasLinha::before {
     content: '';
     width: 5px;
@@ -294,12 +400,36 @@ button.chamada {
     position: absolute;
     z-index: -1;
 }
+*/
+
 .horarios .cardAssunto {
     min-height: 135px;
     background-color: white;
     padding: 10px;
     margin-top: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
 }
+
+.horarios .cardAssuntoCinza {
+    min-height: 135px;
+    background-color: none;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/*Noticias*/
+
+.noticia {
+    background-color: rgba(196,196,196,.1);
+    max-width: 1140px;
+    margin: auto;
+}
+.noticiaimg {
+    max-width: 0px;
+    margin-top: 10px;
+ }
+
+ 
 
 /*EXPOSICAO*/
 #exposicao {
@@ -390,13 +520,19 @@ button {
 .margin0 {
     margin: 0;
 }
+.RGPD {
+    color: blue;
+}
+.RGPD:hover {
+    text-decoration: underline;
+}
 
 /*FINAL DA PAGINA*/
 .pgfinal {
     margin-bottom: 100px;
 }
 #footer {
-    background-color: #638A90;
+    background-color: rgb(51, 89, 94);
     padding: 20px 20px;
     color: white;
     margin-top: 70px;
@@ -436,7 +572,7 @@ button {
     width: 80px;
     margin: 0 10px;
 }
-#logosFooter img:nth-child(2), #logosFooter img:nth-child(3){
+#logosFooter .logop{
     height: 40px;
     width: auto;
 }
@@ -487,11 +623,201 @@ button {
 
 
 
+/************STANDS*******/
+.exposicao_stand {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    align-items: center;
+    margin: auto;
+    /*
+  justify-content: space-evenly ;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 750px;
+  align-content:space-around;
+  padding: 0 10%;*/
+    
+}
+.stand {
+	color: #fff;
+    padding: 30px 15px 0px 20px;
+    margin: 5px;	
+	background: #3db5da;
+    border-radius: 3px;
+    flex: 1 300px;
+    min-height: 90px; 
+    word-wrap: break-word;
+    text-align: center;
+}
+.pop {
+    cursor: pointer;
+}
+
+.speed_mapa {
+    min-width: 370px;
+    display: inline-flex;
+    padding: 0 10%;
+
+
+}
+
+.speed {
+        color: #fff;
+        padding: 30px 15px 0px 20px;
+        background: #3db5da;
+        border-radius: 3px;
+        min-height: 90px;
+        text-align: center;
+     
+    }
+
+.stand-1 {
+    background: #007BFF; 
+}
+.stand-2 {
+    background: #218838; 
+}
+
+.stand-3 {
+    background: #5CB85C; 
+}
+
+.stand-4 {
+   background: #007BFF; 
+}
+
+.stand-5 {
+   background: #218838; 
+}
+
+ .stand-6   {
+    background: #00A359; 
+ }
+ .stand-7 {
+    background: #5CB85C; 
+ }
+
+ 
+ .stand-8 {
+    background: #007BFF; 
+ }
+
+ .stand-9 {
+    background: #F74F58;
+}
+
+ .stand-10 {
+    background: #00A359; 
+ }
+
+ .stand-10 {
+    background: #00979D; 
+ }
+
+ 
+ .stand-11 {
+    background: #218838;
+}
+ .stand-12 {
+    background: #007BFF;
+}
+
+.stand-13   {
+    background: #218838 
+ }
+ .stand-14 {
+    background: #C17F5C; 
+ }
+
+
+.headoradores {
+    margin-left: 30px;
+    margin-top: 10px; 
+    position: absolute; 
+    z-index: 10;
+}
+
+.headstands {
+    text-align: center;
+    margin-bottom: 25px; 
+    margin-top: -20px ;
+}
+
+
+
+/*media Artur */
+
+@media (max-width: 767px) { 
+    .headoradores {
+        margin-left: 115px;
+        margin-top: 10px; 
+    }
+}
+
+
+
+@media (max-width: 780px) { 
+    
+      .stand {
+        flex-basis: 40%;
+      }
+
+
+}
+
+@media (max-width: 400px) { 
+
+    .stand  {
+        margin: 2px;
+        min-width: 140px;
+    }
+
+    .headoradores {
+        margin-top: 10px; 
+        font-size: 1.5rem;
+        margin-left: 30px;
+
+    }
+    
+    .headstands {
+        margin-top: 20px;
+    }
+}
+
+
+.cont {
+
+    max-width: 1150px;
+
+}
+
+
+@media (max-width: 991.98px) { 
+    .headoradores {
+        margin-left: 90px;
+
+    }
+
+
+    .card.orador {
+        min-width: 266px;
+        max-height: 425px;
+
+}
+
+}
+
+
 /*Media Queries Jeniffer*/
+
+
 @media (max-width: 991.98px) { 
     .navbar-brand {
     width: 65%;
     }
+    
     .navbar-nav {
         padding: 0;
     }
@@ -501,6 +827,10 @@ button {
     .navbar-light .navbar-nav .nav-link.active::after {
     width: 0;
     height: 0;
+    }
+    .video iframe {
+    width: 560px;
+    height: 315px;
     }
     .contador button.chamada {
     margin-top:  1rem;
@@ -514,10 +844,8 @@ button {
     .cardhidden {
     display: none;
     }
-    /*.horarios h3 {
-        margin: 0 65% 0 10%;
-    }*/
 
+  
 }
 @media (max-width: 800px) {
     .contador button.chamada {
@@ -538,7 +866,10 @@ button {
     #logosFooter{
         margin-top: 10px;
     }
-
+    .video iframe {
+        width: 460px;
+        height: 315px;
+    }
 }
 @media (max-width: 600px) { 
     #oevento .conteudo{
@@ -576,13 +907,21 @@ button {
     #turma {
         text-align: center;
     }
+    .video iframe {
+        width: 360px;
+        height: 215px;
+    }
 }
-@media (max-width: 360px) { 
+@media (max-width: 360px) {
+    .video iframe {
+        width: 290px;
+        height: 215px;
+    }
     .horarios {
         padding: 0 0 25px 0;
     }
     .horas {
-       margin-top: 10rem;
+       margin-top: 8rem;
     }
     .horas.horasLinha::before {
         height: 400px;
@@ -596,9 +935,10 @@ button {
 
 }
 
+@media (max-width: 300px) {
 
+    .horas {
+       margin-top: 9rem;
 
-
-
-
-
+    }
+}

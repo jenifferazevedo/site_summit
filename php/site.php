@@ -5,6 +5,15 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Summit 1.0, evento de tecnologia e inovação do Serviço de Formação de Vila Nova de Gaia – Porto, com participação de recrutadores e empresas da área.">
+  <meta name="keywords" content="tecnologia, summit, iefp, inovação, carreira">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="content-language" content="pt-br">
+  <meta name="reply-to" content="frontendeveloper1@gmail.com">
+  <meta property="og:title" content="SUMMIT 1.0 - SERVIÇO DE FORMAÇÃO VILA NOVA DE GAIA">
+  <meta property="og:image" content="./">
+
+
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -52,13 +61,11 @@
         <div class="col-12">
           <h1 class="titulo">SUMMIT 1.0</h1>
           <p id="eventoTitle">
-        
             Dia 11 e 12 de fevereiro de 2020 realiza-se a primeira edição do Summit 1.0 – Serviço
             de Formação de Vila Nova de Gaia.
             <br><br>
             O evento foi pensado para satisfazer a necessidade de conhecer melhor o mundo da inovação tecnológica, pela
             perspetiva de recrutadores e empresas dessas áreas.
-           
           </p>
             <p id="sobreevento" class="collapse">
 
@@ -212,7 +219,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/José Pedro Soares - Financiamento bancario.jpg" alt="Orador do Summit - José Pedro Soares">
+                  <img src="./img/oradores/José Pedro Soares - Financiamento bancario.jpg" alt="Orador do Summit -Montepio- José Pedro Soares">
                 </div>
                 <h3>José Pedro Soares</h3>
                 <h4>Montepio</h4><!--Isso é uma empresa?-->
@@ -224,7 +231,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img class="fotop" src="./img/oradores/sandra_oliveira People _ International Brand - fabmaq.jpg" alt="Oradora do Summit - Sandra Oliveira">
+                  <img class="fotop" src="./img/oradores/sandra_oliveira People _ International Brand - fabmaq.jpg" alt="Oradora do Summit - FABAMAQ - Sandra Oliveira">
                 </div>
                 <h3>Sandra Oliveira</h3>
                 <h4>FABAMAQ</h4>
@@ -239,7 +246,7 @@
             <div class="cardshow col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Luís Ferreira">
+                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Birds & Trees- Luís Ferreira">
                 </div>
                 <h3>Luís Ferreira</h3>
                 <h4>Birds & Trees</h4>
@@ -255,7 +262,7 @@
             <div class="cardhidden col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Luís Ferreira">
+                  <img src="./img/oradores/Luís Ferreira - Birds _ Trees.jpg" alt="Orador Summit - Birds & Trees- Luís Ferreira">
                 </div>
                 <h3>Luís Ferreira</h3>
                 <h4>Birds & Trees</h4>
@@ -266,7 +273,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Hugo Matos - ibermagem.jpg" alt="Orador Summit - Hugo Matos">
+                  <img src="./img/oradores/Hugo Matos - ibermagem.jpg" alt="Orador Summit - Ibermagem - Hugo Matos">
                 </div>
                 <h3>Hugo Matos</h3>
                 <h4>Ibermagem</h4>
@@ -303,7 +310,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Gisela Oliveira - Doce segredo.jpg" alt="Orador Summit - Luís Caixinhas">
+                  <img src="./img/oradores/Gisela Oliveira - Doce segredo.jpg" alt="Oradora Summit - Gisela Oliveira">
                 </div>
                 <h3>Gisela Oliveira</h3>
                 <h4>Fundadora Doce Segredo</h4> 
@@ -314,7 +321,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Ricardo Machado - Diretor Recursos Humanos Altran.jpg" alt="Orador Summit - Luís Caixinhas">
+                  <img src="./img/oradores/Ricardo Machado - Diretor Recursos Humanos Altran.jpg" alt="Orador Summit - Ricardo Machado">
                 </div>
                 <h3>Ricardo Machado</h3>
                 <h4>Diretor de Recursos Humanos na Altran.</h4> 
@@ -325,7 +332,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg">
-                  <img src="./img/oradores/Virgilio campos - cozinha do sogro.jpg" alt="Orador Summit - Luís Caixinhas">
+                  <img src="./img/oradores/Virgilio campos - cozinha do sogro.jpg" alt="Orador Summit - Virgílio Campos">
                 </div>
                 <h3>Virgílio Campos</h3>
                 <h4>Fundador "Cozinha do Sogro"</h4> 
@@ -348,7 +355,7 @@
             <div class="col-lg-4 col-md-5 col-sm-8">
               <div class="card orador">
                 <div class="cardimg ">
-                  <img src="./img/oradores/filipe-cordeiro.png" alt="Orador Summit - Fernando Fraga">
+                  <img src="./img/oradores/filipe-cordeiro.png" alt="Orador Summit - Filipe Cordeiro">
                 </div>
                 <h3>Filipe Cordeiro</h3>
                 <h4> Graduado em Economia Internacional </h4>
@@ -828,7 +835,7 @@
       </div>
       <div class="row margin0">
         <div class="col-md-4 col-sm-12 textoForm">
-          <p class="descricao_formulario">Faça o pré-registo para assistir às conferências do dia 11 e 12 de fevereiro – VAGAS LIMITADAS
+        <p class="descricao_formulario">Faça o pré-registo para assistir às conferências do dia 11 e 12 de fevereiro – VAGAS LIMITADAS
             Vai receber um email de confirmação da sua inscrição com um QR Code que deve apresentar no dia do evento para validação da entrada.<br><br>
             Duvídas e informações:<br><a style="color: blue;" href="mailto:sfgaiasummit@gmail.com" target="_blank">sfgaiasummit@gmail.com</a><br></p>
         </div>
@@ -863,8 +870,26 @@
               <div class="form-group col">
                 <select class="custom-select" name="categoria[]" id="categoria" multiple="multiple" required>
                   <option selected disabled value="">Escolhe a tua area de interesse </option>
-                    <option value="' . $id_categoria  . '"></option>';
-                    <!--OPÇÕES PELO SERVER PHP-->
+                    <?php 
+                        include_once './api/config/database.php';
+                        $db = New Database();
+
+                        // get database connection
+                        $con = mysqli_connect($db->host,$db->username,$db->password,$db->db_name);
+
+                        if (mysqli_connect_errno()) {
+                          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                          exit();
+                        }
+                        $sql = mysqli_query($con, "SELECT id, name FROM interest");
+
+                        while ($row = $sql->fetch_assoc()){
+                            $id_categoria=  $row["id"] ;
+                            $nome_categoria =  $row["name"] ;
+
+                            echo '<option value="' . $id_categoria  . '">' . $nome_categoria . '</option>';
+                        }
+                    ?>
                 </select>
                 <div class="invalid-feedback">
                   Por favor, selecione uma area de interesse.
@@ -954,12 +979,12 @@
   <div class="container-fluid">
     <div class="row contador">
       <div class="container">
-        <div id="countTime" class="row">
+        <div class="row">
           <div class="contadorDiv col-lg-3 col-md-3 col-sm-3">
             <p id="resultado">O evento começa em: </p>
           </div>
           <div class="contadorDiv col-lg-6 col-md-6 col-sm-6">
-            <div id="countTime" class="relogio d-flex justify-content-center">
+            <div class="relogio d-flex justify-content-center">
               <div class="bgnum">
                 <p>Dias</p>
                 <p id="dias" class="num"></p>
@@ -978,7 +1003,7 @@
               </div>
             </div>
           </div>
-          <div id="btnPreInscri" class="contadorDiv col-lg-3 col-md-3 col-sm-3">
+          <div class="contadorDiv col-lg-3 col-md-3 col-sm-3 ">
             <a href="#"><button class="chamada">Pré-inscrição</button></a>
           </div>
         </div>

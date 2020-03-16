@@ -1,0 +1,5 @@
+
+database: id12465449_summit	
+user: id12465449_frontendeveloper1	
+password: developer19
+host: localhost

@@ -3,11 +3,9 @@ class Database{
  
     // specify your own database credentials
     public $host = "localhost";
-    public $db_name = "summit";
-    // public $username = "id11905308_test";
-    // public $password = "testiefp";
-    public $username = "root";
-    public $password = "";
+    public $db_name = "id12465449_summit";
+    public $username = "id12465449_frontendeveloper1";
+    public $password = "developer19";
     public $conn;
  
     // get the database connection
